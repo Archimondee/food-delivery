@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,15 +12,39 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_launch_screen" translatesAutoresizingMaskIntoConstraints="NO" id="6ME-7K-Cc5">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_mealmonkey" translatesAutoresizingMaskIntoConstraints="NO" id="WSl-we-glq">
+                                <rect key="frame" x="75" y="358" width="265" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="265" id="NT4-XJ-pPn"/>
+                                    <constraint firstAttribute="height" constant="160" id="knA-Ij-rop"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WSl-we-glq" firstAttribute="centerY" secondItem="6ME-7K-Cc5" secondAttribute="centerY" constant="16" id="1wL-Vr-2oz"/>
+                            <constraint firstItem="6ME-7K-Cc5" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="DfL-MG-0RX"/>
+                            <constraint firstItem="WSl-we-glq" firstAttribute="centerX" secondItem="6ME-7K-Cc5" secondAttribute="centerX" constant="12.5" id="Rdu-5C-oxH"/>
+                            <constraint firstAttribute="bottom" secondItem="6ME-7K-Cc5" secondAttribute="bottom" id="UbS-8P-ykQ"/>
+                            <constraint firstItem="6ME-7K-Cc5" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="aHj-x5-6CX"/>
+                            <constraint firstAttribute="trailing" secondItem="6ME-7K-Cc5" secondAttribute="trailing" id="cnf-1v-nqj"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.307692307692307" y="374.64454976303318"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg_launch_screen" width="375" height="812"/>
+        <image name="logo_mealmonkey" width="334" height="334"/>
+    </resources>
 </document>

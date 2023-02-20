@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F4099D4829A3208500B764A3 /* FDObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4099D4729A3208500B764A3 /* FDObservable.swift */; };
+		F4099D4A29A3246300B764A3 /* FtuxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4099D4929A3246300B764A3 /* FtuxViewModel.swift */; };
 		F43840EB29628D9C00EFFFAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43840EA29628D9C00EFFFAD /* AppDelegate.swift */; };
 		F43840ED29628D9C00EFFFAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43840EC29628D9C00EFFFAD /* SceneDelegate.swift */; };
-		F43840EF29628D9C00EFFFAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43840EE29628D9C00EFFFAD /* ViewController.swift */; };
-		F43840F229628D9C00EFFFAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43840F029628D9C00EFFFAD /* Main.storyboard */; };
 		F43840F429628DA000EFFFAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F43840F329628DA000EFFFAD /* Assets.xcassets */; };
 		F43840F729628DA000EFFFAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43840F529628DA000EFFFAD /* LaunchScreen.storyboard */; };
 		F438410229628DA000EFFFAD /* FoodDeliveryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F438410129628DA000EFFFAD /* FoodDeliveryTests.swift */; };
 		F438410C29628DA000EFFFAD /* FoodDeliveryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F438410B29628DA000EFFFAD /* FoodDeliveryUITests.swift */; };
 		F438410E29628DA000EFFFAD /* FoodDeliveryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F438410D29628DA000EFFFAD /* FoodDeliveryUITestsLaunchTests.swift */; };
+		F438411D2962916300EFFFAD /* Ftux.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F438411C2962916300EFFFAD /* Ftux.storyboard */; };
+		F4EFF2D729A1B8AD00A72878 /* Ftux.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EFF2D629A1B8AD00A72878 /* Ftux.swift */; };
+		F4EFF2DA29A1B9A400A72878 /* FtuxProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EFF2D929A1B9A400A72878 /* FtuxProvider.swift */; };
+		F4F4D41629A1D25D00633A91 /* FtuxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F438411E2962929A00EFFFAD /* FtuxViewController.swift */; };
+		F4F4D41729A1D26100633A91 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2626E29A1CD20003FD910 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F4099D4729A3208500B764A3 /* FDObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDObservable.swift; sourceTree = "<group>"; };
+		F4099D4929A3246300B764A3 /* FtuxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FtuxViewModel.swift; sourceTree = "<group>"; };
 		F43840E729628D9C00EFFFAD /* FoodDelivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDelivery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43840EA29628D9C00EFFFAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F43840EC29628D9C00EFFFAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F43840EE29628D9C00EFFFAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F43840F129628D9C00EFFFAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F43840F329628DA000EFFFAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F43840F629628DA000EFFFAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F43840F829628DA000EFFFAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +54,11 @@
 		F438410729628DA000EFFFAD /* FoodDeliveryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodDeliveryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F438410B29628DA000EFFFAD /* FoodDeliveryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDeliveryUITests.swift; sourceTree = "<group>"; };
 		F438410D29628DA000EFFFAD /* FoodDeliveryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDeliveryUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F438411C2962916300EFFFAD /* Ftux.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ftux.storyboard; sourceTree = "<group>"; };
+		F438411E2962929A00EFFFAD /* FtuxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FtuxViewController.swift; sourceTree = "<group>"; };
+		F4A2626E29A1CD20003FD910 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		F4EFF2D629A1B8AD00A72878 /* Ftux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ftux.swift; sourceTree = "<group>"; };
+		F4EFF2D929A1B9A400A72878 /* FtuxProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FtuxProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +109,11 @@
 		F43840E929628D9C00EFFFAD /* FoodDelivery */ = {
 			isa = PBXGroup;
 			children = (
+				F4EFF2D829A1B99400A72878 /* Providers */,
+				F4EFF2D529A1B89900A72878 /* Models */,
+				F438411A2962914000EFFFAD /* Modules */,
 				F43840EA29628D9C00EFFFAD /* AppDelegate.swift */,
 				F43840EC29628D9C00EFFFAD /* SceneDelegate.swift */,
-				F43840EE29628D9C00EFFFAD /* ViewController.swift */,
-				F43840F029628D9C00EFFFAD /* Main.storyboard */,
 				F43840F329628DA000EFFFAD /* Assets.xcassets */,
 				F43840F529628DA000EFFFAD /* LaunchScreen.storyboard */,
 				F43840F829628DA000EFFFAD /* Info.plist */,
@@ -125,6 +136,42 @@
 				F438410D29628DA000EFFFAD /* FoodDeliveryUITestsLaunchTests.swift */,
 			);
 			path = FoodDeliveryUITests;
+			sourceTree = "<group>";
+		};
+		F438411A2962914000EFFFAD /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				F438411B2962914600EFFFAD /* Ftux */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		F438411B2962914600EFFFAD /* Ftux */ = {
+			isa = PBXGroup;
+			children = (
+				F438411C2962916300EFFFAD /* Ftux.storyboard */,
+				F438411E2962929A00EFFFAD /* FtuxViewController.swift */,
+				F4A2626E29A1CD20003FD910 /* CollectionViewCell.swift */,
+				F4099D4929A3246300B764A3 /* FtuxViewModel.swift */,
+			);
+			path = Ftux;
+			sourceTree = "<group>";
+		};
+		F4EFF2D529A1B89900A72878 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F4EFF2D629A1B8AD00A72878 /* Ftux.swift */,
+				F4099D4729A3208500B764A3 /* FDObservable.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F4EFF2D829A1B99400A72878 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				F4EFF2D929A1B9A400A72878 /* FtuxProvider.swift */,
+			);
+			path = Providers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +242,7 @@
 				TargetAttributes = {
 					F43840E629628D9C00EFFFAD = {
 						CreatedOnToolsVersion = 14.1;
+						LastSwiftMigration = 1410;
 					};
 					F43840FC29628DA000EFFFAD = {
 						CreatedOnToolsVersion = 14.1;
@@ -232,8 +280,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F43840F729628DA000EFFFAD /* LaunchScreen.storyboard in Resources */,
+				F438411D2962916300EFFFAD /* Ftux.storyboard in Resources */,
 				F43840F429628DA000EFFFAD /* Assets.xcassets in Resources */,
-				F43840F229628D9C00EFFFAD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +306,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F43840EF29628D9C00EFFFAD /* ViewController.swift in Sources */,
+				F4EFF2D729A1B8AD00A72878 /* Ftux.swift in Sources */,
+				F4099D4A29A3246300B764A3 /* FtuxViewModel.swift in Sources */,
+				F4099D4829A3208500B764A3 /* FDObservable.swift in Sources */,
+				F4F4D41629A1D25D00633A91 /* FtuxViewController.swift in Sources */,
+				F4F4D41729A1D26100633A91 /* CollectionViewCell.swift in Sources */,
+				F4EFF2DA29A1B9A400A72878 /* FtuxProvider.swift in Sources */,
 				F43840EB29628D9C00EFFFAD /* AppDelegate.swift in Sources */,
 				F43840ED29628D9C00EFFFAD /* SceneDelegate.swift in Sources */,
 			);
@@ -297,14 +350,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F43840F029628D9C00EFFFAD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F43840F129628D9C00EFFFAD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F43840F529628DA000EFFFAD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -435,14 +480,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 742C63FPDC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FoodDelivery/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIMainStoryboardFile = Ftux;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -453,6 +499,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.FoodDelivery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -463,14 +511,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 742C63FPDC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FoodDelivery/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIMainStoryboardFile = Ftux;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -481,6 +530,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.FoodDelivery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
