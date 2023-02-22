@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login Landing View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="LoginLanding" id="Y6W-OH-hqX" customClass="LoginLandingViewController" customModule="FoodDelivery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_login" translatesAutoresizingMaskIntoConstraints="NO" id="TYK-i1-Snj">
+                                <rect key="frame" x="-43" y="-37" width="458" height="500.33333333333331"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="TYK-i1-Snj" secondAttribute="height" multiplier="312:479" constant="132.10229645093943" id="eOi-T7-JGl"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discover the best foods from over 1.000 restaurants and fast delivery to your doorstep" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bix-m6-jJ7">
+                                <rect key="frame" x="36" y="499.33333333333331" width="303" height="31.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                <color key="textColor" name="Secondary Text"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXJ-d5-9l4" customClass="FDSecondaryButton" customModule="FoodDelivery" customModuleProvider="target">
+                                <rect key="frame" x="36" y="686" width="303" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="icl-vT-Ubm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Create an Account">
+                                    <color key="titleColor" name="Primary"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" name="Primary"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="28"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="registerButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="NdM-BE-is9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9NK-vL-g2t" customClass="FDPrimaryButton" customModule="FoodDelivery" customModuleProvider="target">
+                                <rect key="frame" x="36" y="610" width="303" height="56"/>
+                                <color key="backgroundColor" name="Primary"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="bey-4x-ADl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="28"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="28"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="zwd-yX-jzx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Bix-m6-jJ7" secondAttribute="trailing" constant="36" id="5r6-9a-BAP"/>
+                            <constraint firstItem="TYK-i1-Snj" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="-37" id="6ah-cd-srB"/>
+                            <constraint firstItem="Bix-m6-jJ7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="36" id="7We-Pa-4tV"/>
+                            <constraint firstItem="9NK-vL-g2t" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="36" id="83e-jN-5pS"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="nXJ-d5-9l4" secondAttribute="bottom" constant="36" id="DMK-hF-T9U"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="9NK-vL-g2t" secondAttribute="trailing" constant="36" id="EfV-Dz-DZc"/>
+                            <constraint firstItem="nXJ-d5-9l4" firstAttribute="top" secondItem="9NK-vL-g2t" secondAttribute="bottom" constant="20" id="JRv-E6-EM1"/>
+                            <constraint firstAttribute="trailing" secondItem="TYK-i1-Snj" secondAttribute="trailing" constant="-40" id="h3D-4h-itB"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="nXJ-d5-9l4" secondAttribute="trailing" constant="36" id="nKi-Kc-6vx"/>
+                            <constraint firstItem="Bix-m6-jJ7" firstAttribute="top" secondItem="TYK-i1-Snj" secondAttribute="bottom" constant="36" id="uGq-Oe-8JS"/>
+                            <constraint firstItem="TYK-i1-Snj" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="-43" id="ujb-Aa-37x"/>
+                            <constraint firstItem="nXJ-d5-9l4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="36" id="yMT-V2-Y3S"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="LtC-1Z-74B"/>
+                    <connections>
+                        <outlet property="loginButton" destination="9NK-vL-g2t" id="iLb-5q-HLl"/>
+                        <outlet property="registerButton" destination="nXJ-d5-9l4" id="YrG-nm-prD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="997.10144927536237" y="-4.6875"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="zFc-de-9NO">
+            <objects>
+                <viewController storyboardIdentifier="Login" id="wvh-xH-3A8" customClass="LoginViewController" customModule="FoodDelivery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2am-iw-8xF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWK-0u-BVp">
+                                <rect key="frame" x="147.33333333333334" y="67" width="80.666666666666657" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                <color key="textColor" name="Primary Text"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your details to login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8g7-55-2XL">
+                                <rect key="frame" x="36" y="119" width="303" height="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <color key="textColor" name="Primary Text"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="21D-rx-PCs" customClass="FDTextField" customModule="FoodDelivery" customModuleProvider="target">
+                                <rect key="frame" x="36" y="172" width="303" height="56"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="Ft6-5b-vn8"/>
+                                </constraints>
+                                <color key="textColor" name="Primary Text"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="28"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jmJ-Ui-46b" customClass="FDTextField" customModule="FoodDelivery" customModuleProvider="target">
+                                <rect key="frame" x="36" y="248" width="303" height="56"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="oc1-4w-7Zo"/>
+                                </constraints>
+                                <color key="textColor" name="Primary Text"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="28"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXl-rU-4Zp" customClass="FDPrimaryButton" customModule="FoodDelivery" customModuleProvider="target">
+                                <rect key="frame" x="36" y="324" width="303" height="56"/>
+                                <color key="backgroundColor" name="Primary"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="2S5-gj-Z2i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="28"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="28"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Yd2-24-4ds"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or Login with" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQL-b3-lKc">
+                                <rect key="frame" x="36" y="487" width="303" height="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <color key="textColor" name="Primary Text"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBL-Li-mmU">
+                                <rect key="frame" x="36" y="410" width="303" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Forgot your password">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="14"/>
+                                    <color key="baseForegroundColor" name="Secondary Text"/>
+                                </buttonConfiguration>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8UD-me-W0c">
+                                <rect key="frame" x="81.333333333333329" y="704" width="212.66666666666669" height="29"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXf-7x-WsT">
+                                        <rect key="frame" x="0.0" y="6" width="158.66666666666666" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                        <color key="textColor" name="Primary Text"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMh-Tu-wAa">
+                                        <rect key="frame" x="158.66666666666669" y="0.0" width="54" height="29"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Sign Up">
+                                            <color key="titleColor" name="Primary"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="signupButtonTap:" destination="wvh-xH-3A8" eventType="touchUpInside" id="vFk-0p-jg9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="gsr-Zv-bzX">
+                                <rect key="frame" x="36" y="524" width="303" height="136"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AfI-vj-vKA" customClass="FDPrimaryButton" customModule="FoodDelivery" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="303" height="56"/>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="wEk-Oq-neu"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="icn_fb_letter" title="Login with Facebook" imagePadding="15">
+                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="16"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" name="AccentColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="28"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trL-Kn-2mt" customClass="FDPrimaryButton" customModule="FoodDelivery" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="80" width="303" height="56"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="mYj-A1-nN3"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="icn_google_letter" title="Login with Google" imagePadding="15">
+                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="16"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" systemColor="systemRedColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="28"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="B6X-0E-sLi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VWK-0u-BVp" firstAttribute="centerX" secondItem="2am-iw-8xF" secondAttribute="centerX" id="0sO-XN-srM"/>
+                            <constraint firstItem="8UD-me-W0c" firstAttribute="centerX" secondItem="2am-iw-8xF" secondAttribute="centerX" id="2MF-0V-4y7"/>
+                            <constraint firstItem="oBL-Li-mmU" firstAttribute="top" secondItem="GXl-rU-4Zp" secondAttribute="bottom" constant="30" id="5aI-UH-8Fi"/>
+                            <constraint firstItem="jmJ-Ui-46b" firstAttribute="top" secondItem="21D-rx-PCs" secondAttribute="bottom" constant="20" id="6Ae-tJ-Nyo"/>
+                            <constraint firstItem="B6X-0E-sLi" firstAttribute="trailing" secondItem="EQL-b3-lKc" secondAttribute="trailing" constant="36" id="78g-6R-sM9"/>
+                            <constraint firstItem="VWK-0u-BVp" firstAttribute="top" secondItem="B6X-0E-sLi" secondAttribute="top" constant="20" id="A3W-9W-RIq"/>
+                            <constraint firstItem="gsr-Zv-bzX" firstAttribute="leading" secondItem="B6X-0E-sLi" secondAttribute="leading" constant="36" id="EPo-RI-iPl"/>
+                            <constraint firstItem="oBL-Li-mmU" firstAttribute="leading" secondItem="B6X-0E-sLi" secondAttribute="leading" constant="36" id="IaW-NS-Bm3"/>
+                            <constraint firstItem="B6X-0E-sLi" firstAttribute="trailing" secondItem="oBL-Li-mmU" secondAttribute="trailing" constant="36" id="JPJ-RT-mzp"/>
+                            <constraint firstItem="B6X-0E-sLi" firstAttribute="trailing" secondItem="8g7-55-2XL" secondAttribute="trailing" constant="36" id="Npm-vw-RiY"/>
+                            <constraint firstItem="8g7-55-2XL" firstAttribute="centerX" secondItem="2am-iw-8xF" secondAttribute="centerX" id="Puj-pv-LaG"/>
+                            <constraint firstItem="8g7-55-2XL" firstAttribute="top" secondItem="VWK-0u-BVp" secondAttribute="bottom" constant="16" id="ROC-0i-T7v"/>
+                            <constraint firstItem="gsr-Zv-bzX" firstAttribute="top" secondItem="EQL-b3-lKc" secondAttribute="bottom" constant="20" id="SmV-OI-SFK"/>
+                            <constraint firstItem="B6X-0E-sLi" firstAttribute="trailing" secondItem="21D-rx-PCs" secondAttribute="trailing" constant="36" id="W0A-az-7le"/>
+                            <constraint firstItem="B6X-0E-sLi" firstAttribute="trailing" secondItem="GXl-rU-4Zp" secondAttribute="trailing" constant="36" id="aY6-6D-RJ4"/>
+                            <constraint firstItem="8UD-me-W0c" firstAttribute="top" secondItem="gsr-Zv-bzX" secondAttribute="bottom" constant="44" id="bYr-vB-isa"/>
+                            <constraint firstItem="21D-rx-PCs" firstAttribute="leading" secondItem="B6X-0E-sLi" secondAttribute="leading" constant="36" id="d36-GS-4Iy"/>
+                            <constraint firstItem="EQL-b3-lKc" firstAttribute="top" secondItem="oBL-Li-mmU" secondAttribute="bottom" constant="46" id="dKh-eo-6jm"/>
+                            <constraint firstItem="EQL-b3-lKc" firstAttribute="leading" secondItem="B6X-0E-sLi" secondAttribute="leading" constant="36" id="dad-3e-dAi"/>
+                            <constraint firstItem="oBL-Li-mmU" firstAttribute="centerX" secondItem="2am-iw-8xF" secondAttribute="centerX" id="iKp-U2-jyr"/>
+                            <constraint firstItem="GXl-rU-4Zp" firstAttribute="top" secondItem="jmJ-Ui-46b" secondAttribute="bottom" constant="20" id="kYK-Fe-7Fk"/>
+                            <constraint firstItem="B6X-0E-sLi" firstAttribute="trailing" secondItem="jmJ-Ui-46b" secondAttribute="trailing" constant="36" id="lL2-gY-fRR"/>
+                            <constraint firstItem="B6X-0E-sLi" firstAttribute="trailing" secondItem="gsr-Zv-bzX" secondAttribute="trailing" constant="36" id="nN1-Jt-VEx"/>
+                            <constraint firstItem="jmJ-Ui-46b" firstAttribute="leading" secondItem="2am-iw-8xF" secondAttribute="leading" constant="36" id="nqF-dR-IEf"/>
+                            <constraint firstItem="8g7-55-2XL" firstAttribute="leading" secondItem="B6X-0E-sLi" secondAttribute="leading" constant="36" id="rW2-mP-GmR"/>
+                            <constraint firstItem="GXl-rU-4Zp" firstAttribute="leading" secondItem="B6X-0E-sLi" secondAttribute="leading" constant="36" id="sB2-Xw-Rtb"/>
+                            <constraint firstItem="21D-rx-PCs" firstAttribute="top" secondItem="8g7-55-2XL" secondAttribute="bottom" constant="36" id="sMf-de-BSR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="21D-rx-PCs" id="1Na-5G-0AL"/>
+                        <outlet property="passwordTextField" destination="jmJ-Ui-46b" id="CF0-Bz-cVq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yjs-Vm-0Oq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1672.8" y="-5.9113300492610836"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="l9B-iR-Ose">
+            <objects>
+                <viewController storyboardIdentifier="Register" id="f40-aY-vGh" customClass="RegisterViewController" customModule="FoodDelivery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vu6-ow-pfn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFQ-T8-mCV">
+                                <rect key="frame" x="36" y="67" width="303" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                <color key="textColor" name="Primary Text"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your details to sign up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LB2-AL-kTy">
+                                <rect key="frame" x="36" y="123" width="303" height="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <color key="textColor" name="Primary Text"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1vJ-6x-Qdx" customClass="FDTextField" customModule="FoodDelivery" customModuleProvider="target">
+                                <rect key="frame" x="36" y="170" width="303" height="56"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="2Jt-1K-z8g"/>
+                                </constraints>
+                                <color key="textColor" name="Primary Text"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="28"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HWT-qD-daJ" customClass="FDTextField" customModule="FoodDelivery" customModuleProvider="target">
+                                <rect key="frame" x="36" y="246" width="303" height="56"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="RRe-sl-P1t"/>
+                                </constraints>
+                                <color key="textColor" name="Primary Text"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="28"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nnE-gi-xUZ" customClass="FDTextField" customModule="FoodDelivery" customModuleProvider="target">
+                                <rect key="frame" x="36" y="322" width="303" height="56"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="ctB-hj-HfM"/>
+                                </constraints>
+                                <color key="textColor" name="Primary Text"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="28"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DeW-BU-Pqf" customClass="FDTextField" customModule="FoodDelivery" customModuleProvider="target">
+                                <rect key="frame" x="36" y="398" width="303" height="56"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="FCR-LA-Q8E"/>
+                                </constraints>
+                                <color key="textColor" name="Primary Text"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="28"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cQm-rh-FEc" customClass="FDTextField" customModule="FoodDelivery" customModuleProvider="target">
+                                <rect key="frame" x="36" y="474" width="303" height="56"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="l0t-Pz-elg"/>
+                                </constraints>
+                                <color key="textColor" name="Primary Text"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="28"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q7B-iW-5Or" customClass="FDTextField" customModule="FoodDelivery" customModuleProvider="target">
+                                <rect key="frame" x="36" y="550" width="303" height="56"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="RRh-Vf-XEK"/>
+                                </constraints>
+                                <color key="textColor" name="Primary Text"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="28"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="loI-wh-zMf" customClass="FDPrimaryButton" customModule="FoodDelivery" customModuleProvider="target">
+                                <rect key="frame" x="36" y="626" width="303" height="56"/>
+                                <color key="backgroundColor" name="Primary"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="cVq-41-kDb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="28"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="28"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="9Fg-HY-m9f"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Myp-G6-fGl">
+                                <rect key="frame" x="81.333333333333329" y="722" width="212.66666666666669" height="29"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an Account? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7K-Kh-wac">
+                                        <rect key="frame" x="0.0" y="0.0" width="174.66666666666666" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                        <color key="textColor" name="Secondary Text"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nxa-vL-EL1">
+                                        <rect key="frame" x="174.66666666666669" y="0.0" width="38" height="29"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" name="Primary"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="loginButtonTap:" destination="f40-aY-vGh" eventType="touchUpInside" id="9K6-Y5-62s"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3aO-1q-vgT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HWT-qD-daJ" firstAttribute="top" secondItem="1vJ-6x-Qdx" secondAttribute="bottom" constant="20" id="2ck-PI-CnM"/>
+                            <constraint firstAttribute="trailing" secondItem="nnE-gi-xUZ" secondAttribute="trailing" constant="36" id="4gm-SB-TSF"/>
+                            <constraint firstItem="nnE-gi-xUZ" firstAttribute="leading" secondItem="3aO-1q-vgT" secondAttribute="leading" constant="36" id="6Ka-oe-td0"/>
+                            <constraint firstItem="LB2-AL-kTy" firstAttribute="top" secondItem="lFQ-T8-mCV" secondAttribute="bottom" constant="20" id="7u2-tI-3Kd"/>
+                            <constraint firstItem="3aO-1q-vgT" firstAttribute="trailing" secondItem="DeW-BU-Pqf" secondAttribute="trailing" constant="36" id="9Df-Iq-k6T"/>
+                            <constraint firstItem="loI-wh-zMf" firstAttribute="leading" secondItem="3aO-1q-vgT" secondAttribute="leading" constant="36" id="AQI-Jb-voe"/>
+                            <constraint firstAttribute="trailing" secondItem="HWT-qD-daJ" secondAttribute="trailing" constant="36" id="Bbp-Dz-Yi0"/>
+                            <constraint firstItem="LB2-AL-kTy" firstAttribute="leading" secondItem="vu6-ow-pfn" secondAttribute="leading" constant="36" id="CnK-Rp-rMG"/>
+                            <constraint firstItem="3aO-1q-vgT" firstAttribute="trailing" secondItem="lFQ-T8-mCV" secondAttribute="trailing" constant="36" id="J4a-Am-5Mv"/>
+                            <constraint firstItem="Q7B-iW-5Or" firstAttribute="leading" secondItem="3aO-1q-vgT" secondAttribute="leading" constant="36" id="MWk-Ii-kpF"/>
+                            <constraint firstItem="lFQ-T8-mCV" firstAttribute="top" secondItem="3aO-1q-vgT" secondAttribute="top" constant="20" id="Ps4-Of-i4L"/>
+                            <constraint firstItem="cQm-rh-FEc" firstAttribute="leading" secondItem="3aO-1q-vgT" secondAttribute="leading" constant="36" id="Q2O-bU-sXB"/>
+                            <constraint firstItem="3aO-1q-vgT" firstAttribute="trailing" secondItem="loI-wh-zMf" secondAttribute="trailing" constant="36" id="Qh3-iv-jJF"/>
+                            <constraint firstItem="HWT-qD-daJ" firstAttribute="leading" secondItem="3aO-1q-vgT" secondAttribute="leading" constant="36" id="S0I-30-EAk"/>
+                            <constraint firstItem="3aO-1q-vgT" firstAttribute="trailing" secondItem="cQm-rh-FEc" secondAttribute="trailing" constant="36" id="U0Q-kD-nC9"/>
+                            <constraint firstItem="Q7B-iW-5Or" firstAttribute="top" secondItem="cQm-rh-FEc" secondAttribute="bottom" constant="20" id="Xs4-E6-w8Q"/>
+                            <constraint firstItem="3aO-1q-vgT" firstAttribute="trailing" secondItem="1vJ-6x-Qdx" secondAttribute="trailing" constant="36" id="a3F-B5-HpU"/>
+                            <constraint firstItem="nnE-gi-xUZ" firstAttribute="top" secondItem="HWT-qD-daJ" secondAttribute="bottom" constant="20" id="axu-l7-5Mm"/>
+                            <constraint firstItem="DeW-BU-Pqf" firstAttribute="leading" secondItem="3aO-1q-vgT" secondAttribute="leading" constant="36" id="b2v-QQ-NB2"/>
+                            <constraint firstItem="3aO-1q-vgT" firstAttribute="trailing" secondItem="LB2-AL-kTy" secondAttribute="trailing" constant="36" id="evL-GK-Nto"/>
+                            <constraint firstItem="LB2-AL-kTy" firstAttribute="centerX" secondItem="vu6-ow-pfn" secondAttribute="centerX" id="hzK-DP-N8C"/>
+                            <constraint firstItem="Myp-G6-fGl" firstAttribute="top" secondItem="loI-wh-zMf" secondAttribute="bottom" constant="40" id="jza-vs-UM8"/>
+                            <constraint firstItem="DeW-BU-Pqf" firstAttribute="top" secondItem="nnE-gi-xUZ" secondAttribute="bottom" constant="20" id="kwx-li-1UY"/>
+                            <constraint firstItem="loI-wh-zMf" firstAttribute="top" secondItem="Q7B-iW-5Or" secondAttribute="bottom" constant="20" id="nYv-9R-2yL"/>
+                            <constraint firstItem="lFQ-T8-mCV" firstAttribute="centerX" secondItem="vu6-ow-pfn" secondAttribute="centerX" id="oFP-To-3to"/>
+                            <constraint firstItem="Myp-G6-fGl" firstAttribute="centerX" secondItem="vu6-ow-pfn" secondAttribute="centerX" id="oId-jg-s17"/>
+                            <constraint firstItem="1vJ-6x-Qdx" firstAttribute="top" secondItem="LB2-AL-kTy" secondAttribute="bottom" constant="30" id="pUT-wL-m4S"/>
+                            <constraint firstItem="1vJ-6x-Qdx" firstAttribute="leading" secondItem="3aO-1q-vgT" secondAttribute="leading" constant="36" id="seC-tX-ib4"/>
+                            <constraint firstItem="cQm-rh-FEc" firstAttribute="top" secondItem="DeW-BU-Pqf" secondAttribute="bottom" constant="20" id="uRD-Ot-sn9"/>
+                            <constraint firstItem="lFQ-T8-mCV" firstAttribute="leading" secondItem="3aO-1q-vgT" secondAttribute="leading" constant="36" id="wta-Lc-Rs4"/>
+                            <constraint firstAttribute="trailing" secondItem="Q7B-iW-5Or" secondAttribute="trailing" constant="36" id="z0g-Fv-1uC"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QSh-u9-Red" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2375" y="-5"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="1vJ-6x-Qdx">
+            <size key="intrinsicContentSize" width="38.666666666666664" height="18.666666666666668"/>
+        </designable>
+        <designable name="21D-rx-PCs">
+            <size key="intrinsicContentSize" width="35.666666666666664" height="18.666666666666668"/>
+        </designable>
+        <designable name="9NK-vL-g2t">
+            <size key="intrinsicContentSize" width="42" height="32"/>
+        </designable>
+        <designable name="AfI-vj-vKA">
+            <size key="intrinsicContentSize" width="201.33333333333334" height="33.333333333333336"/>
+        </designable>
+        <designable name="DeW-BU-Pqf">
+            <size key="intrinsicContentSize" width="54.666666666666664" height="18.666666666666668"/>
+        </designable>
+        <designable name="GXl-rU-4Zp">
+            <size key="intrinsicContentSize" width="42" height="32"/>
+        </designable>
+        <designable name="HWT-qD-daJ">
+            <size key="intrinsicContentSize" width="35.666666666666664" height="18.666666666666668"/>
+        </designable>
+        <designable name="Q7B-iW-5Or">
+            <size key="intrinsicContentSize" width="120.66666666666667" height="17"/>
+        </designable>
+        <designable name="cQm-rh-FEc">
+            <size key="intrinsicContentSize" width="64" height="17"/>
+        </designable>
+        <designable name="jmJ-Ui-46b">
+            <size key="intrinsicContentSize" width="64" height="17"/>
+        </designable>
+        <designable name="loI-wh-zMf">
+            <size key="intrinsicContentSize" width="60" height="32"/>
+        </designable>
+        <designable name="nnE-gi-xUZ">
+            <size key="intrinsicContentSize" width="42" height="18.666666666666668"/>
+        </designable>
+        <designable name="trL-Kn-2mt">
+            <size key="intrinsicContentSize" width="193.66666666666666" height="33.333333333333336"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="icn_fb_letter" width="7" height="16"/>
+        <image name="icn_google_letter" width="19" height="12"/>
+        <image name="img_login" width="375" height="498"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Primary">
+            <color red="0.9882352941176471" green="0.37647058823529411" blue="0.066666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Primary Text">
+            <color red="0.29019607843137257" green="0.29411764705882354" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Secondary Text">
+            <color red="0.48627450980392156" green="0.49019607843137253" blue="0.49411764705882355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

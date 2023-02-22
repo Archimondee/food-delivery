@@ -44,7 +44,7 @@ class FtuxViewController: UIViewController {
                                 at: .centeredHorizontally, animated: true)
     updatePage(page)
   }
-  
+
   func observeError() {
     viewModel.error.bind { [weak self] error in
       let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
@@ -60,6 +60,8 @@ class FtuxViewController: UIViewController {
       switch index {
       case -1:
         break
+      case self.viewModel.numberOfItems:
+        self.showLoginLandingViewController()
       default:
         if index == 0 {
           self.collectionView.reloadData()
@@ -73,10 +75,11 @@ class FtuxViewController: UIViewController {
   // MARK: - Actions
 
   @IBAction func nextButtonTapped(_ sender: Any) {
-    let toPage = min(viewModel.numberOfItems - 1, pageControl.currentPage + 1)
-    if toPage != pageControl.currentPage {
-      gotoPage(toPage)
-    }
+    let toPage = min(viewModel.numberOfItems, pageControl.currentPage + 1)
+//    if toPage != pageControl.currentPage {
+//      gotoPage(toPage)
+//    }
+    viewModel.currentIndex.value = toPage
   }
 }
 
