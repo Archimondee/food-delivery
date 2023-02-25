@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import FDUI
 
 class LoginViewController: UIViewController {
+  @IBOutlet weak var LoginButton: FDPrimaryButton!
   @IBOutlet weak var nameTextField: FDTextField!
   @IBOutlet weak var passwordTextField: FDTextField!
   override func viewDidLoad() {
@@ -21,6 +23,7 @@ class LoginViewController: UIViewController {
   }
   @IBAction func signupButtonTap(_ sender: Any) {
     showRegisterViewController()
+    removeFromParent()
   }
 }
 
@@ -32,7 +35,7 @@ extension UIViewController {
     let storyboard = UIStoryboard(name: "Login", bundle: nil)
     let viewController = storyboard.instantiateViewController(withIdentifier: "Login")
       as! LoginViewController
-
-    navigationController?.pushViewController(viewController, animated: true)
+    
+    self.navigationController?.pushViewController(viewController, animated: true)
   }
 }

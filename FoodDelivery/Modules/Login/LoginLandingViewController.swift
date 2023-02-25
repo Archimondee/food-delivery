@@ -5,6 +5,7 @@
 //  Created by Gilang Aditya Rahman on 21/02/23.
 //
 
+import FDUI
 import UIKit
 
 class LoginLandingViewController: UIViewController {
@@ -13,11 +14,20 @@ class LoginLandingViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    setup()
+    self.setup()
+    
+    NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
   }
   
+  @objc func keyboardWillShow(_ sender: Notification) {
+    sender.userInfo
+  }
+  
+  @objc func keyboardWillHide(_ sender: Notification) {}
+  
   func setup() {
-    //loginButton.layer.cornerRadius = 28
+    // loginButton.layer.cornerRadius = 28
     
 //    registerButton.layer.borderWidth = 1
 //    registerButton.layer.borderColor = UIColor.primary.cgColor
@@ -27,6 +37,7 @@ class LoginLandingViewController: UIViewController {
   @IBAction func loginButtonTapped(_ sender: Any) {
     showLoginViewController()
   }
+
   @IBAction func registerButtonTapped(_ sender: Any) {
     showRegisterViewController()
   }
@@ -44,8 +55,8 @@ extension UIViewController {
     let windowScene = scenes.first as! UIWindowScene
     let window = windowScene.windows.first!
     
-    let navigationController = UINavigationController(rootViewController:
-                                                        viewController)
+    let navigationController = FDNavigationController(rootViewController:
+      viewController)
     navigationController.isNavigationBarHidden = true
 
     window.rootViewController = navigationController
