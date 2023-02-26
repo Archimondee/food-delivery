@@ -25,6 +25,7 @@ class RegisterViewController: UIViewController {
     setup()
     bindIsLoading()
     bindError()
+    bindIsSignUpSuccess()
   }
 
   deinit {}
@@ -48,6 +49,17 @@ class RegisterViewController: UIViewController {
       }
       else {
         self.dismissLoadingView()
+      }
+    }
+  }
+
+  func bindIsSignUpSuccess() {
+    viewModel.isSignUpSuccess.bind { [weak self] value in
+      guard let `self` = self else { return }
+      if value {
+        self.presentAlert(title: "Yay!", message: "Sign up success! Please login now.") {
+          self.loginButtonTap(self)
+        }
       }
     }
   }

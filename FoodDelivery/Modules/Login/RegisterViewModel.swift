@@ -50,28 +50,19 @@ class RegisterViewModel {
     loadingMessage = "Please wait..."
     isLoading.value = true
     
-    //    Auth.auth().createUser(withEmail: email, password: password) { [weak self] authResult, error in
-    //      guard let `self` = self else { return }
-    //      if let error = error {
-    //        // Error. If error.code == .MissingOrInvalidNonce, make sure
-    //        // you're sending the SHA256-hashed nonce as a hex string with
-    //        // your request to Apple.
-    //        self.isLoading.value = false
-    //        self.error.value = error
-    //        return
-    //      }
-    //      // User is signed in to Firebase with Apple.
-    //      // ...
-    //      let request = authResult?.user.createProfileChangeRequest()
-    //      request?.displayName = name
-    //      request?.commitChanges(completion: { error in
-    //        if let error = error {
-    //          print(error.localizedDescription)
-    //        }
-    //        self.isLoading.value = false
-    //        self.isSignUpSuccess.value = true
-    //      })
-    //    }
-    //  }
+    Auth.auth().createUser(withEmail: email, password: password) { [weak self] _, error in
+      guard let `self` = self else { return }
+      if let error = error {
+        self.isLoading.value = false
+        self.error.value = error
+      } else {
+        self.isSignUpSuccess.value = true
+      }
+    }
+    
+    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
+      self.isLoading.value = false
+      self.isSignUpSuccess.value = true
+    }
   }
 }

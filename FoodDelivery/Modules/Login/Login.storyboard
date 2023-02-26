@@ -132,7 +132,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="Ft6-5b-vn8"/>
                                 </constraints>
-                                <color key="textColor" name="Ptimary Text"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                 <userDefinedRuntimeAttributes>
@@ -147,7 +146,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="oc1-4w-7Zo"/>
                                 </constraints>
-                                <color key="textColor" name="Ptimary Text"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                 <userDefinedRuntimeAttributes>
@@ -176,6 +174,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="loginButtonTap:" destination="wvh-xH-3A8" eventType="touchUpInside" id="d6U-wO-Gsa"/>
                                     <action selector="loginButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Yd2-24-4ds"/>
                                 </connections>
                             </button>
@@ -295,8 +294,8 @@
                     </view>
                     <connections>
                         <outlet property="LoginButton" destination="GXl-rU-4Zp" id="juS-fP-8hp"/>
-                        <outlet property="nameTextField" destination="21D-rx-PCs" id="Emw-Za-Zgg"/>
-                        <outlet property="passwordTextField" destination="jmJ-Ui-46b" id="CF0-Bz-cVq"/>
+                        <outlet property="nameTextField" destination="21D-rx-PCs" id="cH6-rB-iTL"/>
+                        <outlet property="passwordTextField" destination="jmJ-Ui-46b" id="xfS-JL-6jt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yjs-Vm-0Oq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -338,7 +337,6 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="56" id="vZc-Nd-ZXw"/>
                                                         </constraints>
-                                                        <color key="textColor" name="Placeholder"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="name"/>
                                                         <userDefinedRuntimeAttributes>
@@ -353,7 +351,6 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="56" id="WCh-jZ-ARC"/>
                                                         </constraints>
-                                                        <color key="textColor" name="Ptimary Text"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                                         <userDefinedRuntimeAttributes>
@@ -398,7 +395,6 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="56" id="NdH-oX-qwd"/>
                                                         </constraints>
-                                                        <color key="textColor" name="Ptimary Text"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="new-password"/>
                                                         <userDefinedRuntimeAttributes>
@@ -413,7 +409,6 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="56" id="mro-1C-D4T"/>
                                                         </constraints>
-                                                        <color key="textColor" name="Ptimary Text"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="new-password"/>
                                                         <userDefinedRuntimeAttributes>

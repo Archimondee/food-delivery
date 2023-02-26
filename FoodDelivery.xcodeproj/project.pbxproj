@@ -10,6 +10,7 @@
 		50DD22E7D9AEFBA7BB7D1DE5 /* Pods_FoodDelivery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71DAF766CA4799B671ED6520 /* Pods_FoodDelivery.framework */; };
 		A6BA5C0BE56A0EA848661378 /* Pods_FoodDelivery_FoodDeliveryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62D046D36864960911AECDFE /* Pods_FoodDelivery_FoodDeliveryUITests.framework */; };
 		E89B82F94B3CAEF8BE2D22AD /* Pods_FoodDeliveryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69FAEC0688CCC2E26D14B2C1 /* Pods_FoodDeliveryTests.framework */; };
+		F403AB6429AB03C000B20D36 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F403AB6329AB03C000B20D36 /* LoginViewModel.swift */; };
 		F4089D7029A4738800BE815C /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4089D6F29A4738800BE815C /* UIColorExtension.swift */; };
 		F4099D4829A3208500B764A3 /* FDObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4099D4729A3208500B764A3 /* FDObservable.swift */; };
 		F4099D4A29A3246300B764A3 /* FtuxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4099D4929A3246300B764A3 /* FtuxViewModel.swift */; };
@@ -77,6 +78,7 @@
 		8C232B4D6B19F7BE7A2DB8DC /* Pods-FoodDelivery-FoodDeliveryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodDelivery-FoodDeliveryUITests.debug.xcconfig"; path = "Target Support Files/Pods-FoodDelivery-FoodDeliveryUITests/Pods-FoodDelivery-FoodDeliveryUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BB694EFA93DA1514DC46370B /* Pods-FoodDelivery-FoodDeliveryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodDelivery-FoodDeliveryUITests.release.xcconfig"; path = "Target Support Files/Pods-FoodDelivery-FoodDeliveryUITests/Pods-FoodDelivery-FoodDeliveryUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F37D4D331FF9E51171085E41 /* Pods-FoodDelivery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodDelivery.release.xcconfig"; path = "Target Support Files/Pods-FoodDelivery/Pods-FoodDelivery.release.xcconfig"; sourceTree = "<group>"; };
+		F403AB6329AB03C000B20D36 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		F4089D6F29A4738800BE815C /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		F4099D4729A3208500B764A3 /* FDObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDObservable.swift; sourceTree = "<group>"; };
 		F4099D4929A3246300B764A3 /* FtuxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FtuxViewModel.swift; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 				F442503F29A45D280040C8D1 /* Login.storyboard */,
 				F442504129A45D710040C8D1 /* LoginLandingViewController.swift */,
 				F42EECA829A49462004B0617 /* LoginViewController.swift */,
+				F403AB6329AB03C000B20D36 /* LoginViewModel.swift */,
 				F4185C6F29A5B81C00FC2EA5 /* RegisterViewController.swift */,
 				F41A6BFB29A9B5A900BC0A6E /* RegisterViewModel.swift */,
 			);
@@ -524,6 +527,7 @@
 				F4185C7029A5B81C00FC2EA5 /* RegisterViewController.swift in Sources */,
 				F4EFF2DA29A1B9A400A72878 /* FtuxProvider.swift in Sources */,
 				F43840EB29628D9C00EFFFAD /* AppDelegate.swift in Sources */,
+				F403AB6429AB03C000B20D36 /* LoginViewModel.swift in Sources */,
 				F4089D7029A4738800BE815C /* UIColorExtension.swift in Sources */,
 				F41A6BFC29A9B5A900BC0A6E /* RegisterViewModel.swift in Sources */,
 				F442504229A45D710040C8D1 /* LoginLandingViewController.swift in Sources */,
