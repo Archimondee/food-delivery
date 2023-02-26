@@ -13,26 +13,39 @@ class LoginViewController: UIViewController {
   @IBOutlet var LoginButton: FDPrimaryButton!
   @IBOutlet var nameTextField: FDTextField!
   @IBOutlet var passwordTextField: FDTextField!
-
+  @IBOutlet var googleButton: FDPrimaryButton!
+  @IBOutlet var fbButton: FDPrimaryButton!
+  @IBOutlet var loginStackView: UIStackView!
+  
   var viewModel: LoginViewModel!
-
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     setup()
     bindIsLoading()
     bindError()
+    bindIsLoginSuccess()
     // Do any additional setup after loading the view.
   }
-
+  
   deinit {}
-
+  
   // MARK: - Helpers
-
+  
   func setup() {
     nameTextField.delegate = self
     passwordTextField.delegate = self
+    
+    if #available(iOS 13.0, *) {
+      let appleButton = ASAuthorizationAppleIDButton(type: .default, style: .black)
+      loginStackView.insertArrangedSubview(appleButton, at: 0)
+      appleButton.translatesAutoresizingMaskIntoConstraints = false
+      appleButton.heightAnchor.constraint(equalToConstant: 56).isActive = true
+      appleButton.cornerRadius = 28
+      appleButton.addTarget(self, action: #selector(self.appleButtonTapped(_:)), for: .touchUpInside)
+    }
   }
-
+  
   func bindIsLoading() {
     viewModel.isLoading.bind { [weak self] value in
       guard let `self` = self else { return }
@@ -44,16 +57,16 @@ class LoginViewController: UIViewController {
       }
     }
   }
-
-//  func bindIsLoginSuccess() {
-//      viewModel.isLoginSuccess.bind { [weak self] (value) in
-//          guard let `self` = self else { return }
-//          if value {
-//              self.showMainViewController()
-//          }
-//      }
-//  }
-
+  
+  func bindIsLoginSuccess() {
+    viewModel.isLoginSuccess.bind { [weak self] value in
+      guard let `self` = self else { return }
+      if value {
+        self.showHomeViewController()
+      }
+    }
+  }
+  
   func bindError() {
     viewModel.error.bind { [weak self] value in
       guard let `self` = self else { return }
@@ -69,16 +82,45 @@ class LoginViewController: UIViewController {
       }
     }
   }
-
+  
+  func loginWithFb() {}
+  
+  func loginWithGoogle() {}
+  
+  func loginWithAppleId() {
+    let appleIdProvider = ASAuthorizationAppleIDProvider()
+    let request = appleIdProvider.createRequest()
+    request.requestedScopes = [.fullName, .email]
+    
+    request.nonce = viewModel.nonce
+    
+    let authorizationController = ASAuthorizationController(authorizationRequests: [request])
+    authorizationController.delegate = self
+    authorizationController.presentationContextProvider = self
+    authorizationController.performRequests()
+  }
+  
   // MARK: - Actions
-
+  
   @IBAction func loginButtonTap(_ sender: Any) {
     viewModel.login()
   }
-
+  
+  @IBAction func fbButtonTapped(_ sender: Any) {
+    loginWithFb()
+  }
+  
+  @IBAction func googleButtonTapped(_ sender: Any) {
+    loginWithGoogle()
+  }
+  
   @IBAction func signupButtonTap(_ sender: Any) {
     showRegisterViewController()
     removeFromParent()
+  }
+  
+  @objc func appleButtonTapped(_ sender: Any) {
+    loginWithAppleId()
   }
 }
 
@@ -112,5 +154,27 @@ extension LoginViewController: UITextFieldDelegate {
     }
 
     return true
+  }
+}
+
+// MARK: - AppleID Delegate
+
+@available(iOS 13.0, *)
+extension LoginViewController: ASAuthorizationControllerDelegate {
+  func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+    if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
+      viewModel.loginWithCredential(appleIDCredential)
+    }
+  }
+    
+  func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+    presentAlert(title: "Oops!", message: error.localizedDescription)
+  }
+}
+
+@available(iOS 13.0, *)
+extension LoginViewController: ASAuthorizationControllerPresentationContextProviding {
+  func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+    return view.window!
   }
 }

@@ -11,6 +11,8 @@
 		A6BA5C0BE56A0EA848661378 /* Pods_FoodDelivery_FoodDeliveryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62D046D36864960911AECDFE /* Pods_FoodDelivery_FoodDeliveryUITests.framework */; };
 		E89B82F94B3CAEF8BE2D22AD /* Pods_FoodDeliveryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69FAEC0688CCC2E26D14B2C1 /* Pods_FoodDeliveryTests.framework */; };
 		F403AB6429AB03C000B20D36 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F403AB6329AB03C000B20D36 /* LoginViewModel.swift */; };
+		F403AB6929AB176700B20D36 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F403AB6829AB176700B20D36 /* HomeViewController.swift */; };
+		F403AB6B29AB178B00B20D36 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F403AB6A29AB178B00B20D36 /* Home.storyboard */; };
 		F4089D7029A4738800BE815C /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4089D6F29A4738800BE815C /* UIColorExtension.swift */; };
 		F4099D4829A3208500B764A3 /* FDObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4099D4729A3208500B764A3 /* FDObservable.swift */; };
 		F4099D4A29A3246300B764A3 /* FtuxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4099D4929A3246300B764A3 /* FtuxViewModel.swift */; };
@@ -79,6 +81,9 @@
 		BB694EFA93DA1514DC46370B /* Pods-FoodDelivery-FoodDeliveryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodDelivery-FoodDeliveryUITests.release.xcconfig"; path = "Target Support Files/Pods-FoodDelivery-FoodDeliveryUITests/Pods-FoodDelivery-FoodDeliveryUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F37D4D331FF9E51171085E41 /* Pods-FoodDelivery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodDelivery.release.xcconfig"; path = "Target Support Files/Pods-FoodDelivery/Pods-FoodDelivery.release.xcconfig"; sourceTree = "<group>"; };
 		F403AB6329AB03C000B20D36 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		F403AB6829AB176700B20D36 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F403AB6A29AB178B00B20D36 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		F403AB6C29AB257700B20D36 /* FoodDelivery.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FoodDelivery.entitlements; sourceTree = "<group>"; };
 		F4089D6F29A4738800BE815C /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		F4099D4729A3208500B764A3 /* FDObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDObservable.swift; sourceTree = "<group>"; };
 		F4099D4929A3246300B764A3 /* FtuxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FtuxViewModel.swift; sourceTree = "<group>"; };
@@ -150,6 +155,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		F403AB6529AB172E00B20D36 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F403AB6A29AB178B00B20D36 /* Home.storyboard */,
+				F403AB6829AB176700B20D36 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		F4089D6E29A4737600BE815C /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +198,7 @@
 		F43840E929628D9C00EFFFAD /* FoodDelivery */ = {
 			isa = PBXGroup;
 			children = (
+				F403AB6C29AB257700B20D36 /* FoodDelivery.entitlements */,
 				F4089D6E29A4737600BE815C /* Extension */,
 				F4EFF2D829A1B99400A72878 /* Providers */,
 				F4EFF2D529A1B89900A72878 /* Models */,
@@ -218,6 +233,7 @@
 		F438411A2962914000EFFFAD /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				F403AB6529AB172E00B20D36 /* Home */,
 				F442503E29A45D090040C8D1 /* Login */,
 				F438411B2962914600EFFFAD /* Ftux */,
 			);
@@ -390,6 +406,7 @@
 				F442504029A45D280040C8D1 /* Login.storyboard in Resources */,
 				F43840F729628DA000EFFFAD /* LaunchScreen.storyboard in Resources */,
 				F436E9C229A9423D0050A737 /* GoogleService-Info.plist in Resources */,
+				F403AB6B29AB178B00B20D36 /* Home.storyboard in Resources */,
 				F438411D2962916300EFFFAD /* Ftux.storyboard in Resources */,
 				F43840F429628DA000EFFFAD /* Assets.xcassets in Resources */,
 			);
@@ -530,6 +547,7 @@
 				F403AB6429AB03C000B20D36 /* LoginViewModel.swift in Sources */,
 				F4089D7029A4738800BE815C /* UIColorExtension.swift in Sources */,
 				F41A6BFC29A9B5A900BC0A6E /* RegisterViewModel.swift in Sources */,
+				F403AB6929AB176700B20D36 /* HomeViewController.swift in Sources */,
 				F442504229A45D710040C8D1 /* LoginLandingViewController.swift in Sources */,
 				F43840ED29628D9C00EFFFAD /* SceneDelegate.swift in Sources */,
 				F436E9C829A950F10050A737 /* StringExtensions.swift in Sources */,
@@ -702,6 +720,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = FoodDelivery/FoodDelivery.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 742C63FPDC;
@@ -737,9 +756,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = FoodDelivery/FoodDelivery.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 742C63FPDC;
+				DEVELOPMENT_TEAM = UM5JNC6JYW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FoodDelivery/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Meal Monkey";

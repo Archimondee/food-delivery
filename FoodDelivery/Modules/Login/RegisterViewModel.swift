@@ -50,19 +50,22 @@ class RegisterViewModel {
     loadingMessage = "Please wait..."
     isLoading.value = true
     
-    Auth.auth().createUser(withEmail: email, password: password) { [weak self] _, error in
+    Auth.auth().createUser(withEmail: email, password: password) { [weak self] result, error in
       guard let `self` = self else { return }
       if let error = error {
         self.isLoading.value = false
         self.error.value = error
       } else {
-        self.isSignUpSuccess.value = true
+        let request = result?.user.createProfileChangeRequest()
+        request?.displayName = name
+        request?.commitChanges(completion: { [weak self] _ in
+          guard let `self` = self else { return }
+          DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+            self.isLoading.value = false
+            self.isSignUpSuccess.value = true
+          }
+        })
       }
-    }
-    
-    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
-      self.isLoading.value = false
-      self.isSignUpSuccess.value = true
     }
   }
 }
