@@ -8,6 +8,7 @@ target 'FoodDelivery' do
   # Pods for FoodDelivery
   pod 'IQKeyboardManagerSwift'
   pod 'Firebase/Auth'
+  pod 'GoogleSignIn'
 
   target 'FoodDeliveryTests' do
     inherit! :search_paths

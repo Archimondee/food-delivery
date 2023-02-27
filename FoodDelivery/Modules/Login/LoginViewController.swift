@@ -7,13 +7,16 @@
 
 import AuthenticationServices
 import FDUI
+import Firebase
+import FirebaseCore
+import GoogleSignIn
 import UIKit
 
 class LoginViewController: UIViewController {
   @IBOutlet var LoginButton: FDPrimaryButton!
   @IBOutlet var nameTextField: FDTextField!
   @IBOutlet var passwordTextField: FDTextField!
-  @IBOutlet var googleButton: FDPrimaryButton!
+  @IBOutlet var googleButton: GIDSignInButton!
   @IBOutlet var fbButton: FDPrimaryButton!
   @IBOutlet var loginStackView: UIStackView!
   
@@ -85,7 +88,38 @@ class LoginViewController: UIViewController {
   
   func loginWithFb() {}
   
-  func loginWithGoogle() {}
+  func loginWithGoogle() {
+    guard let clientId = FirebaseApp.app()?.options.clientID else { return }
+    
+    let config = GIDConfiguration(clientID: clientId)
+    GIDSignIn.sharedInstance.configuration = config
+    
+    viewModel.loadingMessage = "Please wait"
+    viewModel.isLoading.value = true
+    
+    GIDSignIn.sharedInstance.signIn(withPresenting: self) { [unowned self] result, error in
+      
+      guard error == nil else {
+        viewModel.isLoading.value = false
+        viewModel.error.value = error
+        return
+      }
+
+      guard let user = result?.user,
+            let idToken = user.idToken?.tokenString
+            
+      else {
+        viewModel.isLoading.value = false
+        presentAlert(title: "Oops!", message: "Error")
+        return
+      }
+      
+      let credential = GoogleAuthProvider.credential(withIDToken: idToken,
+                                                     accessToken: user.accessToken.tokenString)
+
+      viewModel.loginWithCredentialGoogle(credential)
+    }
+  }
   
   func loginWithAppleId() {
     let appleIdProvider = ASAuthorizationAppleIDProvider()

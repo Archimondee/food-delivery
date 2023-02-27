@@ -125,4 +125,18 @@ class LoginViewModel {
       self.isLoginSuccess.value = true
     }
   }
+
+  func loginWithCredentialGoogle(_ credential: AuthCredential) {
+    loadingMessage = "Logged in"
+    isLoading.value = true
+    Auth.auth().signIn(with: credential) { _, error in
+      if let error = error {
+        self.isLoading.value = false
+        self.error.value = error
+      }
+
+      self.isLoading.value = false
+      self.isLoginSuccess.value = true
+    }
+  }
 }
