@@ -22,6 +22,7 @@ class RegisterViewModel {
   let error: FDObservable<Error?> = .init(nil)
   let isSignUpSuccess: FDObservable<Bool> = .init(false)
 
+  // MARK: - Signup Function
   func signUp() {
     guard let name = name.value, name.count >= 3 else {
       let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Name is required and must be longer than 3 characters"])

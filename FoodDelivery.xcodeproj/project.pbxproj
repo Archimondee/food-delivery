@@ -18,6 +18,7 @@
 		F4099D4A29A3246300B764A3 /* FtuxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4099D4929A3246300B764A3 /* FtuxViewModel.swift */; };
 		F4185C7029A5B81C00FC2EA5 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4185C6F29A5B81C00FC2EA5 /* RegisterViewController.swift */; };
 		F41A6BFC29A9B5A900BC0A6E /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41A6BFB29A9B5A900BC0A6E /* RegisterViewModel.swift */; };
+		F4266F2929AE7499003B6A0C /* ResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4266F2829AE7499003B6A0C /* ResetPasswordViewModel.swift */; };
 		F42EECA929A49462004B0617 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42EECA829A49462004B0617 /* LoginViewController.swift */; };
 		F436E9C229A9423D0050A737 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F436E9C129A9423D0050A737 /* GoogleService-Info.plist */; };
 		F436E9C829A950F10050A737 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F436E9C729A950F10050A737 /* StringExtensions.swift */; };
@@ -33,6 +34,7 @@
 		F442504229A45D710040C8D1 /* LoginLandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F442504129A45D710040C8D1 /* LoginLandingViewController.swift */; };
 		F4AB5E5C29A64E820030142C /* FDUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4AB5E5B29A64E820030142C /* FDUI.framework */; };
 		F4AB5E5D29A64E820030142C /* FDUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F4AB5E5B29A64E820030142C /* FDUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F4CD8F8829ADC80A0085D5D1 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CD8F8729ADC80A0085D5D1 /* ResetPasswordViewController.swift */; };
 		F4EFF2D729A1B8AD00A72878 /* Ftux.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EFF2D629A1B8AD00A72878 /* Ftux.swift */; };
 		F4EFF2DA29A1B9A400A72878 /* FtuxProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EFF2D929A1B9A400A72878 /* FtuxProvider.swift */; };
 		F4F4D41629A1D25D00633A91 /* FtuxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F438411E2962929A00EFFFAD /* FtuxViewController.swift */; };
@@ -89,6 +91,7 @@
 		F4099D4929A3246300B764A3 /* FtuxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FtuxViewModel.swift; sourceTree = "<group>"; };
 		F4185C6F29A5B81C00FC2EA5 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F41A6BFB29A9B5A900BC0A6E /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		F4266F2829AE7499003B6A0C /* ResetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewModel.swift; sourceTree = "<group>"; };
 		F42EECA829A49462004B0617 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F436E9C129A9423D0050A737 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F436E9C729A950F10050A737 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
@@ -109,6 +112,7 @@
 		F442504129A45D710040C8D1 /* LoginLandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginLandingViewController.swift; sourceTree = "<group>"; };
 		F4A2626E29A1CD20003FD910 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		F4AB5E5B29A64E820030142C /* FDUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FDUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4CD8F8729ADC80A0085D5D1 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		F4EFF2D629A1B8AD00A72878 /* Ftux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ftux.swift; sourceTree = "<group>"; };
 		F4EFF2D929A1B9A400A72878 /* FtuxProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FtuxProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -260,6 +264,8 @@
 				F403AB6329AB03C000B20D36 /* LoginViewModel.swift */,
 				F4185C6F29A5B81C00FC2EA5 /* RegisterViewController.swift */,
 				F41A6BFB29A9B5A900BC0A6E /* RegisterViewModel.swift */,
+				F4CD8F8729ADC80A0085D5D1 /* ResetPasswordViewController.swift */,
+				F4266F2829AE7499003B6A0C /* ResetPasswordViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -538,6 +544,7 @@
 			files = (
 				F4EFF2D729A1B8AD00A72878 /* Ftux.swift in Sources */,
 				F4099D4A29A3246300B764A3 /* FtuxViewModel.swift in Sources */,
+				F4CD8F8829ADC80A0085D5D1 /* ResetPasswordViewController.swift in Sources */,
 				F4099D4829A3208500B764A3 /* FDObservable.swift in Sources */,
 				F4F4D41629A1D25D00633A91 /* FtuxViewController.swift in Sources */,
 				F4F4D41729A1D26100633A91 /* CollectionViewCell.swift in Sources */,
@@ -546,6 +553,7 @@
 				F43840EB29628D9C00EFFFAD /* AppDelegate.swift in Sources */,
 				F403AB6429AB03C000B20D36 /* LoginViewModel.swift in Sources */,
 				F4089D7029A4738800BE815C /* UIColorExtension.swift in Sources */,
+				F4266F2929AE7499003B6A0C /* ResetPasswordViewModel.swift in Sources */,
 				F41A6BFC29A9B5A900BC0A6E /* RegisterViewModel.swift in Sources */,
 				F403AB6929AB176700B20D36 /* HomeViewController.swift in Sources */,
 				F442504229A45D710040C8D1 /* LoginLandingViewController.swift in Sources */,

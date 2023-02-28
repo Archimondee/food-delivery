@@ -153,6 +153,11 @@ class LoginViewController: UIViewController {
     removeFromParent()
   }
   
+  @IBAction func resetPasswordTap(_ sender: Any) {
+    showResetPasswordController()
+    removeFromParent()
+  }
+  
   @objc func appleButtonTapped(_ sender: Any) {
     loginWithAppleId()
   }
