@@ -11,14 +11,25 @@
 		A6BA5C0BE56A0EA848661378 /* Pods_FoodDelivery_FoodDeliveryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62D046D36864960911AECDFE /* Pods_FoodDelivery_FoodDeliveryUITests.framework */; };
 		E89B82F94B3CAEF8BE2D22AD /* Pods_FoodDeliveryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69FAEC0688CCC2E26D14B2C1 /* Pods_FoodDeliveryTests.framework */; };
 		F403AB6429AB03C000B20D36 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F403AB6329AB03C000B20D36 /* LoginViewModel.swift */; };
-		F403AB6929AB176700B20D36 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F403AB6829AB176700B20D36 /* HomeViewController.swift */; };
-		F403AB6B29AB178B00B20D36 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F403AB6A29AB178B00B20D36 /* Home.storyboard */; };
 		F4089D7029A4738800BE815C /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4089D6F29A4738800BE815C /* UIColorExtension.swift */; };
 		F4099D4829A3208500B764A3 /* FDObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4099D4729A3208500B764A3 /* FDObservable.swift */; };
 		F4099D4A29A3246300B764A3 /* FtuxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4099D4929A3246300B764A3 /* FtuxViewModel.swift */; };
+		F41646D729AFCB8B002A2E87 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F41646D629AFCB8B002A2E87 /* Profile.storyboard */; };
+		F41646D929AFCB95002A2E87 /* Offers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F41646D829AFCB95002A2E87 /* Offers.storyboard */; };
+		F41646E029AFCD3F002A2E87 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F41646DF29AFCD3F002A2E87 /* More.storyboard */; };
+		F41646E429AFD64E002A2E87 /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F41646E329AFD64E002A2E87 /* Menu.storyboard */; };
+		F41646E629AFD667002A2E87 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41646E529AFD667002A2E87 /* MenuViewController.swift */; };
+		F41646E829AFD6D1002A2E87 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F41646E729AFD6D0002A2E87 /* Home.storyboard */; };
+		F41646EA29AFD6FB002A2E87 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41646E929AFD6FA002A2E87 /* HomeViewController.swift */; };
+		F41646EC29AFD73E002A2E87 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41646EB29AFD73E002A2E87 /* MoreViewController.swift */; };
+		F41646EE29AFD74A002A2E87 /* OffersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41646ED29AFD74A002A2E87 /* OffersViewController.swift */; };
+		F41646F029AFD75F002A2E87 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41646EF29AFD75F002A2E87 /* ProfileViewController.swift */; };
+		F41646F229AFD996002A2E87 /* FDTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41646F129AFD996002A2E87 /* FDTabBarController.swift */; };
 		F4185C7029A5B81C00FC2EA5 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4185C6F29A5B81C00FC2EA5 /* RegisterViewController.swift */; };
 		F41A6BFC29A9B5A900BC0A6E /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41A6BFB29A9B5A900BC0A6E /* RegisterViewModel.swift */; };
 		F4266F2929AE7499003B6A0C /* ResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4266F2829AE7499003B6A0C /* ResetPasswordViewModel.swift */; };
+		F4266F2C29AE8140003B6A0C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4266F2B29AE8140003B6A0C /* MainViewController.swift */; };
+		F4266F2E29AE8158003B6A0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4266F2D29AE8158003B6A0C /* Main.storyboard */; };
 		F42EECA929A49462004B0617 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42EECA829A49462004B0617 /* LoginViewController.swift */; };
 		F436E9C229A9423D0050A737 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F436E9C129A9423D0050A737 /* GoogleService-Info.plist */; };
 		F436E9C829A950F10050A737 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F436E9C729A950F10050A737 /* StringExtensions.swift */; };
@@ -83,15 +94,26 @@
 		BB694EFA93DA1514DC46370B /* Pods-FoodDelivery-FoodDeliveryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodDelivery-FoodDeliveryUITests.release.xcconfig"; path = "Target Support Files/Pods-FoodDelivery-FoodDeliveryUITests/Pods-FoodDelivery-FoodDeliveryUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F37D4D331FF9E51171085E41 /* Pods-FoodDelivery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodDelivery.release.xcconfig"; path = "Target Support Files/Pods-FoodDelivery/Pods-FoodDelivery.release.xcconfig"; sourceTree = "<group>"; };
 		F403AB6329AB03C000B20D36 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		F403AB6829AB176700B20D36 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		F403AB6A29AB178B00B20D36 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		F403AB6C29AB257700B20D36 /* FoodDelivery.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FoodDelivery.entitlements; sourceTree = "<group>"; };
 		F4089D6F29A4738800BE815C /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		F4099D4729A3208500B764A3 /* FDObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDObservable.swift; sourceTree = "<group>"; };
 		F4099D4929A3246300B764A3 /* FtuxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FtuxViewModel.swift; sourceTree = "<group>"; };
+		F41646D629AFCB8B002A2E87 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		F41646D829AFCB95002A2E87 /* Offers.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Offers.storyboard; sourceTree = "<group>"; };
+		F41646DF29AFCD3F002A2E87 /* More.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
+		F41646E329AFD64E002A2E87 /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
+		F41646E529AFD667002A2E87 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		F41646E729AFD6D0002A2E87 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		F41646E929AFD6FA002A2E87 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F41646EB29AFD73E002A2E87 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		F41646ED29AFD74A002A2E87 /* OffersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersViewController.swift; sourceTree = "<group>"; };
+		F41646EF29AFD75F002A2E87 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F41646F129AFD996002A2E87 /* FDTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDTabBarController.swift; sourceTree = "<group>"; };
 		F4185C6F29A5B81C00FC2EA5 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F41A6BFB29A9B5A900BC0A6E /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		F4266F2829AE7499003B6A0C /* ResetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewModel.swift; sourceTree = "<group>"; };
+		F4266F2B29AE8140003B6A0C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F4266F2D29AE8158003B6A0C /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F42EECA829A49462004B0617 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F436E9C129A9423D0050A737 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F436E9C729A950F10050A737 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
@@ -162,8 +184,8 @@
 		F403AB6529AB172E00B20D36 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				F403AB6A29AB178B00B20D36 /* Home.storyboard */,
-				F403AB6829AB176700B20D36 /* HomeViewController.swift */,
+				F41646E729AFD6D0002A2E87 /* Home.storyboard */,
+				F41646E929AFD6FA002A2E87 /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -175,6 +197,52 @@
 				F436E9C729A950F10050A737 /* StringExtensions.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		F41646CE29AFCB21002A2E87 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				F41646E329AFD64E002A2E87 /* Menu.storyboard */,
+				F41646E529AFD667002A2E87 /* MenuViewController.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		F41646CF29AFCB29002A2E87 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F41646D629AFCB8B002A2E87 /* Profile.storyboard */,
+				F41646EF29AFD75F002A2E87 /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		F41646D029AFCB31002A2E87 /* Offers */ = {
+			isa = PBXGroup;
+			children = (
+				F41646D829AFCB95002A2E87 /* Offers.storyboard */,
+				F41646ED29AFD74A002A2E87 /* OffersViewController.swift */,
+			);
+			path = Offers;
+			sourceTree = "<group>";
+		};
+		F41646DE29AFCD34002A2E87 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				F41646DF29AFCD3F002A2E87 /* More.storyboard */,
+				F41646EB29AFD73E002A2E87 /* MoreViewController.swift */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
+		F4266F2A29AE80E4003B6A0C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F4266F2D29AE8158003B6A0C /* Main.storyboard */,
+				F4266F2B29AE8140003B6A0C /* MainViewController.swift */,
+				F41646F129AFD996002A2E87 /* FDTabBarController.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		F43840DE29628D9C00EFFFAD = {
@@ -237,7 +305,12 @@
 		F438411A2962914000EFFFAD /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				F41646DE29AFCD34002A2E87 /* More */,
+				F41646D029AFCB31002A2E87 /* Offers */,
+				F41646CF29AFCB29002A2E87 /* Profile */,
 				F403AB6529AB172E00B20D36 /* Home */,
+				F41646CE29AFCB21002A2E87 /* Menu */,
+				F4266F2A29AE80E4003B6A0C /* Main */,
 				F442503E29A45D090040C8D1 /* Login */,
 				F438411B2962914600EFFFAD /* Ftux */,
 			);
@@ -409,12 +482,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4266F2E29AE8158003B6A0C /* Main.storyboard in Resources */,
+				F41646E829AFD6D1002A2E87 /* Home.storyboard in Resources */,
 				F442504029A45D280040C8D1 /* Login.storyboard in Resources */,
 				F43840F729628DA000EFFFAD /* LaunchScreen.storyboard in Resources */,
 				F436E9C229A9423D0050A737 /* GoogleService-Info.plist in Resources */,
-				F403AB6B29AB178B00B20D36 /* Home.storyboard in Resources */,
+				F41646D729AFCB8B002A2E87 /* Profile.storyboard in Resources */,
+				F41646E429AFD64E002A2E87 /* Menu.storyboard in Resources */,
+				F41646D929AFCB95002A2E87 /* Offers.storyboard in Resources */,
 				F438411D2962916300EFFFAD /* Ftux.storyboard in Resources */,
 				F43840F429628DA000EFFFAD /* Assets.xcassets in Resources */,
+				F41646E029AFCD3F002A2E87 /* More.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,11 +620,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F41646EC29AFD73E002A2E87 /* MoreViewController.swift in Sources */,
 				F4EFF2D729A1B8AD00A72878 /* Ftux.swift in Sources */,
 				F4099D4A29A3246300B764A3 /* FtuxViewModel.swift in Sources */,
 				F4CD8F8829ADC80A0085D5D1 /* ResetPasswordViewController.swift in Sources */,
 				F4099D4829A3208500B764A3 /* FDObservable.swift in Sources */,
 				F4F4D41629A1D25D00633A91 /* FtuxViewController.swift in Sources */,
+				F41646F229AFD996002A2E87 /* FDTabBarController.swift in Sources */,
+				F4266F2C29AE8140003B6A0C /* MainViewController.swift in Sources */,
+				F41646EA29AFD6FB002A2E87 /* HomeViewController.swift in Sources */,
 				F4F4D41729A1D26100633A91 /* CollectionViewCell.swift in Sources */,
 				F4185C7029A5B81C00FC2EA5 /* RegisterViewController.swift in Sources */,
 				F4EFF2DA29A1B9A400A72878 /* FtuxProvider.swift in Sources */,
@@ -554,12 +636,14 @@
 				F403AB6429AB03C000B20D36 /* LoginViewModel.swift in Sources */,
 				F4089D7029A4738800BE815C /* UIColorExtension.swift in Sources */,
 				F4266F2929AE7499003B6A0C /* ResetPasswordViewModel.swift in Sources */,
+				F41646F029AFD75F002A2E87 /* ProfileViewController.swift in Sources */,
 				F41A6BFC29A9B5A900BC0A6E /* RegisterViewModel.swift in Sources */,
-				F403AB6929AB176700B20D36 /* HomeViewController.swift in Sources */,
+				F41646E629AFD667002A2E87 /* MenuViewController.swift in Sources */,
 				F442504229A45D710040C8D1 /* LoginLandingViewController.swift in Sources */,
 				F43840ED29628D9C00EFFFAD /* SceneDelegate.swift in Sources */,
 				F436E9C829A950F10050A737 /* StringExtensions.swift in Sources */,
 				F42EECA929A49462004B0617 /* LoginViewController.swift in Sources */,
+				F41646EE29AFD74A002A2E87 /* OffersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // iOS Below 13
     if Auth.auth().currentUser != nil {
-      window?.rootViewController?.showHomeViewController()
+      window?.rootViewController?.showMainViewController()
     }
 
     return true

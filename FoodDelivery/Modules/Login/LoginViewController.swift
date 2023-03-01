@@ -65,7 +65,7 @@ class LoginViewController: UIViewController {
     viewModel.isLoginSuccess.bind { [weak self] value in
       guard let `self` = self else { return }
       if value {
-        self.showHomeViewController()
+        self.showMainViewController()
       }
     }
   }
@@ -175,6 +175,8 @@ extension UIViewController {
     navigationController?.pushViewController(viewController, animated: true)
   }
 }
+
+// MARK: - UITextFieldDelegate
 
 extension LoginViewController: UITextFieldDelegate {
   func textField(_ textField: UITextField,

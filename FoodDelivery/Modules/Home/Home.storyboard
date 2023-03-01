@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--Home-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="Home" id="Y6W-OH-hqX" customClass="HomeViewController" customModule="FoodDelivery" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,16 +33,38 @@
                             <constraint firstItem="gOy-xb-htO" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="hFA-8i-u4W"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Home" id="urW-td-h5Y"/>
                     <connections>
                         <outlet property="logoutButton" destination="gOy-xb-htO" id="nuY-eB-K9l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="45" y="5"/>
+            <point key="canvasLocation" x="973.84615384615381" y="4.9763033175355451"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="n8F-Cg-cQB">
+            <objects>
+                <navigationController storyboardIdentifier="NavHome" automaticallyAdjustsScrollViewInsets="NO" id="tU8-DG-nOd" customClass="FDNavigationController" customModule="FDUI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="tab_home" id="B8a-L5-AGa"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xvV-sN-Al9">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="vse-lA-Xrg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tfk-b3-dRB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44.615384615384613" y="4.9763033175355451"/>
         </scene>
     </scenes>
     <resources>
+        <image name="tab_home" width="30" height="29"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

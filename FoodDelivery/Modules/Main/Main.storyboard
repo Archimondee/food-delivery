@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--NavOffers-->
+        <scene sceneID="eGy-de-ytt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Offers" referencedIdentifier="NavOffers" id="cpC-jb-0xj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Offers" image="tab_offers" id="Nma-Ri-6K3"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1lu-HB-rFy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-842" y="-274"/>
+        </scene>
+        <!--NavHome-->
+        <scene sceneID="6zr-Yk-643">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" referencedIdentifier="NavHome" id="vaV-xm-eZP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="tab_home" id="y1k-5R-n6a"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KjX-p4-QCR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-842" y="-217"/>
+        </scene>
+        <!--NavMenu-->
+        <scene sceneID="gvH-Tf-zaF">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Menu" referencedIdentifier="NavMenu" id="RZk-RD-7eM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Menu" image="tab_menu" id="GSP-QR-ggq"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G96-qg-9e5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-845" y="-327"/>
+        </scene>
+        <!--NavMore-->
+        <scene sceneID="zeT-Yu-gWk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="More" referencedIdentifier="NavMore" id="c9m-64-d5h" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="More" image="tab_more" id="JTA-az-7Yg"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xKe-jX-9fp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-846" y="-106"/>
+        </scene>
+        <!--NavProfile-->
+        <scene sceneID="vfn-NE-jn6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" referencedIdentifier="NavProfile" id="QqH-9c-szV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="tab_profile" id="5WI-zw-99k"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wE1-Yv-Mfh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-839" y="-159"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="cHV-4J-fyi">
+            <objects>
+                <tabBarController storyboardIdentifier="Main" id="77B-So-e2E" customClass="MainViewController" customModule="FoodDelivery" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MeT-bk-79v">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="Primary"/>
+                        <color key="selectedImageTintColor" name="Primary"/>
+                        <tabBarAppearance key="standardAppearance"/>
+                        <tabBarAppearance key="scrollEdgeAppearance"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="RZk-RD-7eM" kind="relationship" relationship="viewControllers" id="n8p-Ag-ikZ"/>
+                        <segue destination="cpC-jb-0xj" kind="relationship" relationship="viewControllers" id="5Dq-HM-VVj"/>
+                        <segue destination="vaV-xm-eZP" kind="relationship" relationship="viewControllers" id="6sO-bV-yLg"/>
+                        <segue destination="QqH-9c-szV" kind="relationship" relationship="viewControllers" id="qmN-eh-gA4"/>
+                        <segue destination="c9m-64-d5h" kind="relationship" relationship="viewControllers" id="226-UA-ROu"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uvc-WO-8Ox" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1594" y="-198"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tab_home" width="30" height="29"/>
+        <image name="tab_menu" width="14" height="14"/>
+        <image name="tab_more" width="16" height="16"/>
+        <image name="tab_offers" width="16" height="16"/>
+        <image name="tab_profile" width="13" height="17"/>
+        <namedColor name="Primary">
+            <color red="0.9882352941176471" green="0.37647058823529411" blue="0.066666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
