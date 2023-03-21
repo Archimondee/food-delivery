@@ -8,5 +8,8 @@
 import UIKit
 
 extension UIColor {
-  static var primary: UIColor = UIColor(named: "Primary")!
+  static var primary: UIColor = .init(named: "Primary")!
+  static var placeholder: UIColor = .init(named: "Placeholder")!
+  static var primaryText: UIColor = .init(named: "Primary Text")!
+  static var secondaryText: UIColor = .init(named: "Secondary Text")!
 }

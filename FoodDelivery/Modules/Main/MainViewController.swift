@@ -23,8 +23,8 @@ class MainViewController: UITabBarController {
     tabBar.unselectedItemTintColor = UIColor(rgb: 0xB6B7B7)
 
     delegate = self
-    // Set selected index
-    // selectedIndex = 2
+    // Set selected index navigation tab bar
+    selectedIndex = 2
   }
 }
 

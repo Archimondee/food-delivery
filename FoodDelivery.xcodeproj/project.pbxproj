@@ -45,6 +45,7 @@
 		F43ECE5529C9E4D500794ACA /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43ECE5429C9E4D500794ACA /* CategoriesCollectionViewCell.swift */; };
 		F442504029A45D280040C8D1 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F442503F29A45D280040C8D1 /* Login.storyboard */; };
 		F442504229A45D710040C8D1 /* LoginLandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F442504129A45D710040C8D1 /* LoginLandingViewController.swift */; };
+		F456B07629CA22290004EF41 /* RestaurantViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F456B07529CA22290004EF41 /* RestaurantViewCell.swift */; };
 		F4AB5E5C29A64E820030142C /* FDUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4AB5E5B29A64E820030142C /* FDUI.framework */; };
 		F4AB5E5D29A64E820030142C /* FDUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F4AB5E5B29A64E820030142C /* FDUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F4CD8F8829ADC80A0085D5D1 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CD8F8729ADC80A0085D5D1 /* ResetPasswordViewController.swift */; };
@@ -136,6 +137,7 @@
 		F43ECE5429C9E4D500794ACA /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		F442503F29A45D280040C8D1 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		F442504129A45D710040C8D1 /* LoginLandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginLandingViewController.swift; sourceTree = "<group>"; };
+		F456B07529CA22290004EF41 /* RestaurantViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewCell.swift; sourceTree = "<group>"; };
 		F4A2626E29A1CD20003FD910 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		F4AB5E5B29A64E820030142C /* FDUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FDUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4CD8F8729ADC80A0085D5D1 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				F41646E929AFD6FA002A2E87 /* HomeViewController.swift */,
 				F43ECE5229C9E3D700794ACA /* CategoriesViewCell.swift */,
 				F43ECE5429C9E4D500794ACA /* CategoriesCollectionViewCell.swift */,
+				F456B07529CA22290004EF41 /* RestaurantViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -635,6 +638,7 @@
 				F43ECE5529C9E4D500794ACA /* CategoriesCollectionViewCell.swift in Sources */,
 				F4F4D41629A1D25D00633A91 /* FtuxViewController.swift in Sources */,
 				F41646F229AFD996002A2E87 /* FDTabBarController.swift in Sources */,
+				F456B07629CA22290004EF41 /* RestaurantViewCell.swift in Sources */,
 				F4266F2C29AE8140003B6A0C /* MainViewController.swift in Sources */,
 				F41646EA29AFD6FB002A2E87 /* HomeViewController.swift in Sources */,
 				F4F4D41729A1D26100633A91 /* CollectionViewCell.swift in Sources */,
