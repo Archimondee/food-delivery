@@ -23,18 +23,20 @@ class MainViewController: UITabBarController {
     tabBar.unselectedItemTintColor = UIColor(rgb: 0xB6B7B7)
 
     delegate = self
+    // Set selected index
+    // selectedIndex = 2
   }
 }
 
 extension MainViewController: UITabBarControllerDelegate {
   func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-    //if Auth.auth().currentUser == nil {
-      presentAlert(title: "Oops!", message: "Please login")
-      //showLoginViewController()
+    if Auth.auth().currentUser == nil {
+      //presentAlert(title: "Oops!", message: "Please login")
+      showLoginViewController()
       return false
-    //}
+    }
 
-    //return true
+    return true
   }
 }
 

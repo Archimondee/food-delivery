@@ -75,6 +75,8 @@ class RegisterViewController: UIViewController {
           self.dismiss(animated: true) {
             persentAlert()
           }
+        }else {
+          persentAlert()
         }
       }
     }
