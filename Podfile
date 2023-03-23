@@ -11,6 +11,8 @@ target 'FoodDelivery' do
   pod 'GoogleSignIn'
   pod 'FBSDKCoreKit'
   pod 'FBSDKLoginKit'
+  pod 'Moya/RxSwift', '~> 15.0'
+  pod 'Kingfisher'
 
   target 'FoodDeliveryTests' do
     inherit! :search_paths

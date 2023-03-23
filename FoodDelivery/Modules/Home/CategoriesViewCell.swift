@@ -8,17 +8,16 @@
 import UIKit
 
 class CategoriesViewCell: UITableViewCell {
-  @IBOutlet weak var collectionView: UICollectionView!
-  
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+  @IBOutlet var collectionView: UICollectionView!
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    // Initialization code
+  }
 
-        // Configure the view for the selected state
-    }
+  override func setSelected(_ selected: Bool, animated: Bool) {
+    super.setSelected(selected, animated: animated)
 
+    // Configure the view for the selected state
+  }
 }

@@ -7,6 +7,7 @@
 
 import FDUI
 import FirebaseAuth
+import Kingfisher
 import UIKit
 
 class HomeViewController: UIViewController {
@@ -15,9 +16,16 @@ class HomeViewController: UIViewController {
   @IBOutlet var locationButton: UIButton!
   @IBOutlet var tableView: UITableView!
 
+  var categories: [RestaurantCategory] = []
+  var popular: [Restaurant] = []
+  var mostPopular: [Restaurant] = []
+
   override func viewDidLoad() {
     super.viewDidLoad()
     setup()
+    loadCategories()
+    loadPopular()
+    loadMostPopular()
   }
 
   func setup() {
@@ -27,6 +35,42 @@ class HomeViewController: UIViewController {
 
     tableView.dataSource = self
     tableView.delegate = self
+  }
+
+  func loadCategories() {
+    restaurantProvider.getCategories { [weak self] result in
+      switch result {
+      case .success(let data):
+        self?.categories = data
+        self?.tableView.reloadSections(IndexSet([0]), with: .automatic)
+      case .failure(let error):
+        self?.presentAlert(title: "Error", message: error.localizedDescription)
+      }
+    }
+  }
+
+  func loadPopular() {
+    restaurantProvider.getPopular { [weak self] result in
+      switch result {
+      case .success(let data):
+        self?.popular = data
+        self?.tableView.reloadSections(IndexSet([1]), with: .automatic)
+      case .failure(let error):
+        self?.presentAlert(title: "Error 12", message: error.localizedDescription)
+      }
+    }
+  }
+
+  func loadMostPopular() {
+    restaurantProvider.getMostPopular { [weak self] result in
+      switch result {
+      case .success(let data):
+        self?.mostPopular = data
+        self?.tableView.reloadSections(IndexSet([1]), with: .automatic)
+      case .failure(let error):
+        self?.presentAlert(title: "Error 12", message: error.localizedDescription)
+      }
+    }
   }
 
   // MARK: - Actions
@@ -46,7 +90,7 @@ extension UIViewController {
   // Navigation Replace
   func showHomeViewController() {
     let storyboard = UIStoryboard(name: "Home", bundle: nil)
-    let viewController = storyboard.instantiateViewController(withIdentifier: "Home")
+    let viewController = storyboard.instantiateViewController(withIdentifier: "Home") as! HomeViewController
 
     let scenes = UIApplication.shared.connectedScenes
     let windowScene = scenes.first as! UIWindowScene
@@ -72,9 +116,9 @@ extension HomeViewController: UITableViewDataSource {
     case 0:
       return 1
     case 1:
-      return 3
+      return min(3, popular.count)
     case 2:
-      return 0
+      return 1
     default:
       return 0
     }
@@ -85,6 +129,7 @@ extension HomeViewController: UITableViewDataSource {
     case 0:
       let cell = tableView.dequeueReusableCell(withIdentifier: "Categories", for: indexPath) as! CategoriesViewCell
 
+      cell.collectionView.tag = indexPath.section
       cell.collectionView.dataSource = self
       cell.collectionView.delegate = self
       cell.collectionView.reloadData()
@@ -92,16 +137,21 @@ extension HomeViewController: UITableViewDataSource {
       return cell
     case 1:
       let cell = tableView.dequeueReusableCell(withIdentifier: "Restaurant", for: indexPath) as! RestaurantViewCell
+      let restaurant = popular[indexPath.row]
+      if restaurant.imageUrl != "" {
+        cell.restaurantImageView.kf.setImage(with: URL(string: restaurant.imageUrl))
+      } else {
+        cell.restaurantImageView.image = UIImage(named: "img_pizza")
+      }
 
-      cell.restaurantImageView.image = UIImage(named: "img_pizza")
-      cell.nameLabel.text = "Pizza Yummy!"
+      cell.nameLabel.text = restaurant.name
 
-      let ratingAttText: NSMutableAttributedString = .init(string: "4.9",
+      let ratingAttText: NSMutableAttributedString = .init(string: String(format: "%.1f", restaurant.overallRating),
                                                            attributes: [
                                                              .font: UIFont.systemFont(ofSize: 12, weight: .regular),
                                                              .foregroundColor: UIColor.primary
                                                            ])
-      ratingAttText.append(NSAttributedString(string: " (124 ratings)",
+      ratingAttText.append(NSAttributedString(string: " (\(restaurant.totalRating) ratings)",
                                               attributes: [.font: UIFont.systemFont(ofSize: 12, weight: .regular),
                                                            .foregroundColor: UIColor.placeholder]))
 
@@ -122,6 +172,17 @@ extension HomeViewController: UITableViewDataSource {
         }
       }
       cell.categoriesLabel.attributedText = categoriesAttText
+
+      return cell
+
+    case 2:
+      let cell = tableView.dequeueReusableCell(withIdentifier: "PopularRestaurants", for: indexPath) as! PopularRestaurantsViewCell
+
+      cell.collectionView.tag = indexPath.section
+      cell.collectionView.dataSource = self
+      cell.collectionView.delegate = self
+      cell.collectionView.reloadData()
+
       return cell
 
     default:
@@ -129,6 +190,8 @@ extension HomeViewController: UITableViewDataSource {
     }
   }
 }
+
+// MARK: - UITableViewDelegate
 
 extension HomeViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -197,11 +260,22 @@ extension HomeViewController: UITableViewDelegate {
   }
 }
 
+// MARK: - UICollectionViewDelegate
+
 extension HomeViewController: UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    presentAlert(title: "Hello", message: "Message!!")
+    switch collectionView.tag {
+    case 0:
+      presentAlert(title: "Hello", message: "Message!!")
+    case 2:
+      presentAlert(title: "Hello", message: "Message 123!!")
+    default:
+      break
+    }
   }
 }
+
+// MARK: - UICollectionViewDataSource
 
 extension HomeViewController: UICollectionViewDataSource {
   func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -209,15 +283,77 @@ extension HomeViewController: UICollectionViewDataSource {
   }
 
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 10
+    switch collectionView.tag {
+    case 0:
+      return categories.count
+    case 2:
+      return mostPopular.count
+
+    default:
+      return 10
+    }
   }
 
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Category", for: indexPath) as! CategoriesCollectionViewCell
+    switch collectionView.tag {
+    case 0:
+      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Category", for: indexPath) as! CategoriesCollectionViewCell
+      let category = categories[indexPath.item]
+      if category.image?.url != nil {
+        cell.imageView.kf.setImage(with: URL(string: category.image?.url ?? ""))
+      } else {
+        cell.imageView.image = UIImage(named: "img_dummy_category")
+      }
 
-    cell.imageView.image = UIImage(named: "img_dummy_category")
-    cell.titleLabel.text = "Cat. \(indexPath.item + 1)"
+      cell.titleLabel.text = category.name
 
-    return cell
+      return cell
+    case 2:
+      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PopularRestaurant", for: indexPath) as! PopularRestaurantViewCell
+      let mostPopular = mostPopular[indexPath.item]
+
+      if mostPopular.imageUrl != "" {
+        cell.restaurantImageView.kf.setImage(with: URL(string: mostPopular.imageUrl))
+      } else {
+        cell.restaurantImageView.image = UIImage(named: "img_spagheti")
+      }
+
+      cell.titleLabel.text = mostPopular.name
+
+      let ratingAttText: NSMutableAttributedString = .init(string: String(format: "%.1f", mostPopular.overallRating),
+                                                           attributes: [
+                                                             .font: UIFont.systemFont(ofSize: 12, weight: .regular),
+                                                             .foregroundColor: UIColor.primary
+                                                           ])
+      ratingAttText.append(NSAttributedString(string: " (\(mostPopular.totalRating) ratings)",
+                                              attributes: [.font: UIFont.systemFont(ofSize: 12, weight: .regular),
+                                                           .foregroundColor: UIColor.placeholder]))
+
+      cell.ratingLabel.attributedText = ratingAttText
+      let categories: [String] = ["Cafė", "Western Food"]
+      let categoriesAttText: NSMutableAttributedString = .init()
+
+      for i in 0 ..< categories.count {
+        categoriesAttText.append(NSAttributedString(string: categories[i],
+                                                    attributes: [.font: UIFont.systemFont(ofSize: 12, weight: .regular),
+                                                                 .foregroundColor: UIColor.placeholder]))
+
+        if i != categories.count - 1 {
+          categoriesAttText.append(NSAttributedString(string: " - ", attributes: [
+            .font: UIFont.systemFont(ofSize: 12, weight: .regular),
+            .foregroundColor: UIColor.primary
+          ]))
+        }
+      }
+      cell.categoriesLabel.attributedText = categoriesAttText
+
+      return cell
+    default:
+      return UICollectionViewCell()
+    }
   }
 }
+
+// MARK: - RestaurantProviderProtocol
+
+extension HomeViewController: RestaurantProviderProtocol {}

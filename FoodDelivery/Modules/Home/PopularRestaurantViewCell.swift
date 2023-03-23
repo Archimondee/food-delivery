@@ -8,5 +8,9 @@
 import UIKit
 
 class PopularRestaurantViewCell: UICollectionViewCell {
-    
+  @IBOutlet var ratingImageView: UIImageView!
+  @IBOutlet var restaurantImageView: UIImageView!
+  @IBOutlet var categoriesLabel: UILabel!
+  @IBOutlet var ratingLabel: UILabel!
+  @IBOutlet var titleLabel: UILabel!
 }
