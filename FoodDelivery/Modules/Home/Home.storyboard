@@ -212,31 +212,34 @@
                                             <outlet property="restaurantImageView" destination="ZJ9-TP-xVY" id="XYy-lh-0K2"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PopularRestaurants" rowHeight="304" id="Nfc-if-NT5" customClass="PopularRestaurantsViewCell" customModule="FoodDelivery" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="589.33333206176758" width="390" height="304"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PopularRestaurants" rowHeight="213" id="Nfc-if-NT5" customClass="PopularRestaurantsViewCell" customModule="FoodDelivery" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="589.33333206176758" width="390" height="213"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nfc-if-NT5" id="wI1-dM-z5w">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="304"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="213"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EpG-Qi-6o4">
-                                                    <rect key="frame" x="0.0" y="0.0" width="390" height="304"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="390" height="189"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                    <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PlJ-x6-WXp">
-                                                        <size key="itemSize" width="228" height="219"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="189" id="ibf-cf-7re"/>
+                                                    </constraints>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PlJ-x6-WXp">
+                                                        <size key="itemSize" width="228" height="187"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PopularRestaurant" id="BfK-dJ-ybm" customClass="PopularRestaurantViewCell" customModule="FoodDelivery" customModuleProvider="target">
-                                                            <rect key="frame" x="81" y="0.0" width="228" height="219"/>
+                                                            <rect key="frame" x="20" y="1" width="228" height="187"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cud-6h-XRz">
-                                                                <rect key="frame" x="0.0" y="0.0" width="228" height="219"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="228" height="187"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jAO-8B-XDS">
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_spagheti" translatesAutoresizingMaskIntoConstraints="NO" id="jAO-8B-XDS">
                                                                         <rect key="frame" x="0.0" y="0.0" width="228" height="135"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="228" id="0rH-v7-hpq"/>
@@ -252,20 +255,51 @@
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_star" translatesAutoresizingMaskIntoConstraints="NO" id="COd-e8-oxd">
                                                                         <rect key="frame" x="0.0" y="167" width="14" height="14.333333333333343"/>
                                                                     </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kd0-Vg-J2d">
+                                                                        <rect key="frame" x="18" y="167.33333333333334" width="86.333333333333329" height="14"/>
+                                                                        <attributedString key="attributedText">
+                                                                            <fragment content="4.9">
+                                                                                <attributes>
+                                                                                    <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <color key="NSColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                                                </attributes>
+                                                                            </fragment>
+                                                                            <fragment content=" (128 ratings)">
+                                                                                <attributes>
+                                                                                    <color key="NSColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                                                </attributes>
+                                                                            </fragment>
+                                                                        </attributedString>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Western Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAE-n3-M5w">
+                                                                        <rect key="frame" x="108.33333333333334" y="167.33333333333334" width="75.333333333333343" height="14"/>
+                                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                                        <color key="textColor" name="Placeholder"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
                                                                 </subviews>
                                                                 <constraints>
                                                                     <constraint firstItem="d94-CP-ac7" firstAttribute="top" secondItem="jAO-8B-XDS" secondAttribute="bottom" constant="8" id="1DG-aR-3hc"/>
+                                                                    <constraint firstItem="XAE-n3-M5w" firstAttribute="centerY" secondItem="Kd0-Vg-J2d" secondAttribute="centerY" id="2cI-KS-6Bz"/>
                                                                     <constraint firstItem="COd-e8-oxd" firstAttribute="top" secondItem="d94-CP-ac7" secondAttribute="bottom" constant="4" id="Bo8-XE-mWc"/>
                                                                     <constraint firstItem="d94-CP-ac7" firstAttribute="top" secondItem="jAO-8B-XDS" secondAttribute="bottom" constant="8" id="E1n-h8-HW4"/>
+                                                                    <constraint firstItem="COd-e8-oxd" firstAttribute="centerY" secondItem="Kd0-Vg-J2d" secondAttribute="centerY" id="H3J-T9-Hap"/>
                                                                     <constraint firstItem="jAO-8B-XDS" firstAttribute="leading" secondItem="cud-6h-XRz" secondAttribute="leading" id="Pi6-0w-2dM"/>
+                                                                    <constraint firstItem="Kd0-Vg-J2d" firstAttribute="leading" secondItem="COd-e8-oxd" secondAttribute="trailing" constant="4" id="YZD-sL-4o3"/>
                                                                     <constraint firstAttribute="trailing" secondItem="d94-CP-ac7" secondAttribute="trailing" id="c7a-ES-ocv"/>
                                                                     <constraint firstItem="d94-CP-ac7" firstAttribute="leading" secondItem="cud-6h-XRz" secondAttribute="leading" id="doB-LC-YVc"/>
                                                                     <constraint firstItem="COd-e8-oxd" firstAttribute="leading" secondItem="d94-CP-ac7" secondAttribute="leading" id="fNs-O5-anO"/>
+                                                                    <constraint firstItem="XAE-n3-M5w" firstAttribute="leading" secondItem="Kd0-Vg-J2d" secondAttribute="trailing" constant="4" id="nuY-Kv-xp3"/>
                                                                     <constraint firstItem="jAO-8B-XDS" firstAttribute="top" secondItem="cud-6h-XRz" secondAttribute="top" id="qJn-yD-Iq9"/>
                                                                     <constraint firstAttribute="trailing" secondItem="jAO-8B-XDS" secondAttribute="trailing" id="xAw-BF-xxt"/>
                                                                 </constraints>
                                                             </collectionViewCellContentView>
-                                                            <size key="customSize" width="228" height="219"/>
+                                                            <size key="customSize" width="228" height="187"/>
                                                         </collectionViewCell>
                                                     </cells>
                                                 </collectionView>
@@ -328,6 +362,7 @@
         <image name="icn_star" width="14" height="14.333333015441895"/>
         <image name="img_dummy_category" width="264" height="264"/>
         <image name="img_pizza" width="375" height="193"/>
+        <image name="img_spagheti" width="617" height="411"/>
         <image name="tab_home" width="30" height="29"/>
         <namedColor name="Placeholder">
             <color red="0.71372549019607845" green="0.71764705882352942" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
