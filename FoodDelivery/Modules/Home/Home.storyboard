@@ -212,6 +212,72 @@
                                             <outlet property="restaurantImageView" destination="ZJ9-TP-xVY" id="XYy-lh-0K2"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PopularRestaurants" rowHeight="304" id="Nfc-if-NT5" customClass="PopularRestaurantsViewCell" customModule="FoodDelivery" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="589.33333206176758" width="390" height="304"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nfc-if-NT5" id="wI1-dM-z5w">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="304"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EpG-Qi-6o4">
+                                                    <rect key="frame" x="0.0" y="0.0" width="390" height="304"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PlJ-x6-WXp">
+                                                        <size key="itemSize" width="228" height="219"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PopularRestaurant" id="BfK-dJ-ybm" customClass="PopularRestaurantViewCell" customModule="FoodDelivery" customModuleProvider="target">
+                                                            <rect key="frame" x="81" y="0.0" width="228" height="219"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cud-6h-XRz">
+                                                                <rect key="frame" x="0.0" y="0.0" width="228" height="219"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jAO-8B-XDS">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="228" height="135"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="228" id="0rH-v7-hpq"/>
+                                                                            <constraint firstAttribute="height" constant="135" id="1w3-gw-aIt"/>
+                                                                        </constraints>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Testing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d94-CP-ac7">
+                                                                        <rect key="frame" x="0.0" y="143" width="228" height="20"/>
+                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_star" translatesAutoresizingMaskIntoConstraints="NO" id="COd-e8-oxd">
+                                                                        <rect key="frame" x="0.0" y="167" width="14" height="14.333333333333343"/>
+                                                                    </imageView>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="d94-CP-ac7" firstAttribute="top" secondItem="jAO-8B-XDS" secondAttribute="bottom" constant="8" id="1DG-aR-3hc"/>
+                                                                    <constraint firstItem="COd-e8-oxd" firstAttribute="top" secondItem="d94-CP-ac7" secondAttribute="bottom" constant="4" id="Bo8-XE-mWc"/>
+                                                                    <constraint firstItem="d94-CP-ac7" firstAttribute="top" secondItem="jAO-8B-XDS" secondAttribute="bottom" constant="8" id="E1n-h8-HW4"/>
+                                                                    <constraint firstItem="jAO-8B-XDS" firstAttribute="leading" secondItem="cud-6h-XRz" secondAttribute="leading" id="Pi6-0w-2dM"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="d94-CP-ac7" secondAttribute="trailing" id="c7a-ES-ocv"/>
+                                                                    <constraint firstItem="d94-CP-ac7" firstAttribute="leading" secondItem="cud-6h-XRz" secondAttribute="leading" id="doB-LC-YVc"/>
+                                                                    <constraint firstItem="COd-e8-oxd" firstAttribute="leading" secondItem="d94-CP-ac7" secondAttribute="leading" id="fNs-O5-anO"/>
+                                                                    <constraint firstItem="jAO-8B-XDS" firstAttribute="top" secondItem="cud-6h-XRz" secondAttribute="top" id="qJn-yD-Iq9"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="jAO-8B-XDS" secondAttribute="trailing" id="xAw-BF-xxt"/>
+                                                                </constraints>
+                                                            </collectionViewCellContentView>
+                                                            <size key="customSize" width="228" height="219"/>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                </collectionView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="EpG-Qi-6o4" firstAttribute="top" secondItem="wI1-dM-z5w" secondAttribute="top" id="J2S-AG-IUY"/>
+                                                <constraint firstItem="EpG-Qi-6o4" firstAttribute="leading" secondItem="wI1-dM-z5w" secondAttribute="leading" id="KRI-6w-AuU"/>
+                                                <constraint firstAttribute="bottom" secondItem="EpG-Qi-6o4" secondAttribute="bottom" priority="250" id="MDb-Pg-Z6X"/>
+                                                <constraint firstAttribute="trailing" secondItem="EpG-Qi-6o4" secondAttribute="trailing" id="ogo-ul-lWp"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>

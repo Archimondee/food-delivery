@@ -34,6 +34,10 @@ class HomeViewController: UIViewController {
   @objc func restaurantsButtonTapped(_ sender: Any) {
     print("View all restaurant")
   }
+
+  @objc func popularRestaurantsButtonTapped(_ sender: Any) {
+    print("View all restaurant")
+  }
 }
 
 // MARK: - UIViewController
@@ -60,7 +64,7 @@ extension UIViewController {
 
 extension HomeViewController: UITableViewDataSource {
   func numberOfSections(in tableView: UITableView) -> Int {
-    return 2
+    return 3
   }
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -69,6 +73,8 @@ extension HomeViewController: UITableViewDataSource {
       return 1
     case 1:
       return 3
+    case 2:
+      return 0
     default:
       return 0
     }
@@ -117,6 +123,7 @@ extension HomeViewController: UITableViewDataSource {
       }
       cell.categoriesLabel.attributedText = categoriesAttText
       return cell
+
     default:
       return UITableViewCell()
     }
@@ -128,7 +135,7 @@ extension HomeViewController: UITableViewDelegate {
     switch section {
     case 0:
       return nil
-    case 1:
+    case 1, 2:
       let view = UIView(frame: .zero)
       view.backgroundColor = .white
       let label = UILabel(frame: .zero)
@@ -153,7 +160,16 @@ extension HomeViewController: UITableViewDelegate {
         button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
         button.centerYAnchor.constraint(equalTo: label.centerYAnchor)
       ])
-      button.addTarget(self, action: #selector(restaurantsButtonTapped(_:)), for: .touchUpInside)
+      switch section {
+      case 1:
+        label.text = "Popular Restaurants"
+        button.addTarget(self, action: #selector(restaurantsButtonTapped(_:)), for: .touchUpInside)
+      case 2:
+        label.text = "Most Popular"
+        button.addTarget(self, action: #selector(popularRestaurantsButtonTapped(_:)), for: .touchUpInside)
+      default:
+        break
+      }
 
       return view
     default:
@@ -165,17 +181,17 @@ extension HomeViewController: UITableViewDelegate {
     switch section {
     case 0:
       return 0
-    case 1:
+    case 1, 2:
       return 72
     default:
       return 0
     }
   }
-  
+
   func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
     return nil
   }
-  
+
   func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
     return 0.001
   }
