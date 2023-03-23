@@ -51,8 +51,8 @@
 		F4B13F5129CCAFCB008ECA3E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B13F5029CCAFCB008ECA3E /* API.swift */; };
 		F4B13F5329CCB250008ECA3E /* RestaurantProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B13F5229CCB250008ECA3E /* RestaurantProvider.swift */; };
 		F4B13F5529CCB671008ECA3E /* RestaurantCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B13F5429CCB671008ECA3E /* RestaurantCategory.swift */; };
-		F4B13F5729CCB6E3008ECA3E /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B13F5629CCB6E3008ECA3E /* Image.swift */; };
 		F4B13F5929CCBE43008ECA3E /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B13F5829CCBE43008ECA3E /* Restaurant.swift */; };
+		F4B13F5B29CCD977008ECA3E /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B13F5A29CCD977008ECA3E /* Image.swift */; };
 		F4CD8F8829ADC80A0085D5D1 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CD8F8729ADC80A0085D5D1 /* ResetPasswordViewController.swift */; };
 		F4E4ED6729CC31E900D35DC8 /* PopularRestaurantsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E4ED6629CC31E900D35DC8 /* PopularRestaurantsViewCell.swift */; };
 		F4E4ED6929CC321400D35DC8 /* PopularRestaurantViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E4ED6829CC321400D35DC8 /* PopularRestaurantViewCell.swift */; };
@@ -150,8 +150,8 @@
 		F4B13F5029CCAFCB008ECA3E /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		F4B13F5229CCB250008ECA3E /* RestaurantProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantProvider.swift; sourceTree = "<group>"; };
 		F4B13F5429CCB671008ECA3E /* RestaurantCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCategory.swift; sourceTree = "<group>"; };
-		F4B13F5629CCB6E3008ECA3E /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		F4B13F5829CCBE43008ECA3E /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		F4B13F5A29CCD977008ECA3E /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		F4CD8F8729ADC80A0085D5D1 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		F4E4ED6629CC31E900D35DC8 /* PopularRestaurantsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularRestaurantsViewCell.swift; sourceTree = "<group>"; };
 		F4E4ED6829CC321400D35DC8 /* PopularRestaurantViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularRestaurantViewCell.swift; sourceTree = "<group>"; };
@@ -383,8 +383,8 @@
 				F4EFF2D629A1B8AD00A72878 /* Ftux.swift */,
 				F4099D4729A3208500B764A3 /* FDObservable.swift */,
 				F4B13F5429CCB671008ECA3E /* RestaurantCategory.swift */,
-				F4B13F5629CCB6E3008ECA3E /* Image.swift */,
 				F4B13F5829CCBE43008ECA3E /* Restaurant.swift */,
+				F4B13F5A29CCD977008ECA3E /* Image.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -669,6 +669,7 @@
 				F43ECE5529C9E4D500794ACA /* CategoriesCollectionViewCell.swift in Sources */,
 				F4F4D41629A1D25D00633A91 /* FtuxViewController.swift in Sources */,
 				F41646F229AFD996002A2E87 /* FDTabBarController.swift in Sources */,
+				F4B13F5B29CCD977008ECA3E /* Image.swift in Sources */,
 				F456B07629CA22290004EF41 /* RestaurantViewCell.swift in Sources */,
 				F4266F2C29AE8140003B6A0C /* MainViewController.swift in Sources */,
 				F41646EA29AFD6FB002A2E87 /* HomeViewController.swift in Sources */,
@@ -690,7 +691,6 @@
 				F436E9C829A950F10050A737 /* StringExtensions.swift in Sources */,
 				F42EECA929A49462004B0617 /* LoginViewController.swift in Sources */,
 				F4E4ED6729CC31E900D35DC8 /* PopularRestaurantsViewCell.swift in Sources */,
-				F4B13F5729CCB6E3008ECA3E /* Image.swift in Sources */,
 				F41646EE29AFD74A002A2E87 /* OffersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
