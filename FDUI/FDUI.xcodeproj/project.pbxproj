@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		F41A6BFF29A9C74D00BC0A6E /* FDLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41A6BFD29A9C74D00BC0A6E /* FDLoadingViewController.swift */; };
 		F41A6C0029A9C74D00BC0A6E /* FDLoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F41A6BFE29A9C74D00BC0A6E /* FDLoadingViewController.xib */; };
+		F49B393F29CDAA0000269FC9 /* FDImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49B393E29CDAA0000269FC9 /* FDImage.swift */; };
+		F49B394129CDB01400269FC9 /* FDRoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49B394029CDB01400269FC9 /* FDRoundedView.swift */; };
 		F4AB5E4929A64B0A0030142C /* FDUI.h in Headers */ = {isa = PBXBuildFile; fileRef = F4AB5E4829A64B0A0030142C /* FDUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F4AB5E5229A64B850030142C /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB5E5129A64B850030142C /* UIColorExtension.swift */; };
 		F4AB5E5629A64BD10030142C /* FDPrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB5E5329A64BD00030142C /* FDPrimaryButton.swift */; };
@@ -16,11 +18,14 @@
 		F4AB5E6029A650320030142C /* FDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB5E5F29A650320030142C /* FDTextField.swift */; };
 		F4AB5E6229A670360030142C /* FDNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB5E6129A670360030142C /* FDNavigationController.swift */; };
 		F4AB5E6429A673E10030142C /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB5E6329A673E10030142C /* UIViewControllerExtensions.swift */; };
+		F4EFC41829CE069C0025C93C /* FDCustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EFC41729CE069C0025C93C /* FDCustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F41A6BFD29A9C74D00BC0A6E /* FDLoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDLoadingViewController.swift; sourceTree = "<group>"; };
 		F41A6BFE29A9C74D00BC0A6E /* FDLoadingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FDLoadingViewController.xib; sourceTree = "<group>"; };
+		F49B393E29CDAA0000269FC9 /* FDImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDImage.swift; sourceTree = "<group>"; };
+		F49B394029CDB01400269FC9 /* FDRoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDRoundedView.swift; sourceTree = "<group>"; };
 		F4AB5E4529A64B0A0030142C /* FDUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FDUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4AB5E4829A64B0A0030142C /* FDUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FDUI.h; sourceTree = "<group>"; };
 		F4AB5E5129A64B850030142C /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -29,6 +34,7 @@
 		F4AB5E5F29A650320030142C /* FDTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FDTextField.swift; sourceTree = "<group>"; };
 		F4AB5E6129A670360030142C /* FDNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDNavigationController.swift; sourceTree = "<group>"; };
 		F4AB5E6329A673E10030142C /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		F4EFC41729CE069C0025C93C /* FDCustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDCustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,9 @@
 				F4AB5E6129A670360030142C /* FDNavigationController.swift */,
 				F41A6BFD29A9C74D00BC0A6E /* FDLoadingViewController.swift */,
 				F41A6BFE29A9C74D00BC0A6E /* FDLoadingViewController.xib */,
+				F49B393E29CDAA0000269FC9 /* FDImage.swift */,
+				F49B394029CDB01400269FC9 /* FDRoundedView.swift */,
+				F4EFC41729CE069C0025C93C /* FDCustomTextField.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -176,7 +185,10 @@
 				F4AB5E5229A64B850030142C /* UIColorExtension.swift in Sources */,
 				F4AB5E5729A64BD10030142C /* FDSecondaryButton.swift in Sources */,
 				F4AB5E6029A650320030142C /* FDTextField.swift in Sources */,
+				F4EFC41829CE069C0025C93C /* FDCustomTextField.swift in Sources */,
 				F41A6BFF29A9C74D00BC0A6E /* FDLoadingViewController.swift in Sources */,
+				F49B393F29CDAA0000269FC9 /* FDImage.swift in Sources */,
+				F49B394129CDB01400269FC9 /* FDRoundedView.swift in Sources */,
 				F4AB5E6429A673E10030142C /* UIViewControllerExtensions.swift in Sources */,
 				F4AB5E6229A670360030142C /* FDNavigationController.swift in Sources */,
 			);
