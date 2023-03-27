@@ -8,10 +8,13 @@
 import UIKit
 
 @IBDesignable
-public class FDCustomTextField: UIView {
-  weak var stackView: UIStackView!
+public class FDCustomTextField: UIControl {
+  weak var hStackView: UIStackView!
+  weak var vStackView: UIStackView!
   public weak var titleLabel: UILabel!
   public weak var textField: UITextField!
+  weak var accessoryButton: UIButton!
+  
   public enum ContentType: Int {
     case `default` = 0
     case phone = 1
@@ -75,40 +78,35 @@ public class FDCustomTextField: UIView {
   
   func setup() {
     backgroundColor = UIColor(rgb: 0xF2F2F2)
-    if viewWithTag(99) == nil {
-      let button = UIButton(type: .system)
-      button.tag = 99
-      addSubview(button)
-      button.translatesAutoresizingMaskIntoConstraints = false
+    if hStackView == nil {
+      let hStackView = UIStackView(frame: .zero)
+      addSubview(hStackView)
+      self.hStackView = hStackView
+      hStackView.axis = .horizontal
+      hStackView.spacing = 8
+      hStackView.alignment = .fill
+      hStackView.distribution = .fill
+      hStackView.translatesAutoresizingMaskIntoConstraints = false
       NSLayoutConstraint.activate([
-        button.leadingAnchor.constraint(equalTo: leadingAnchor),
-        button.trailingAnchor.constraint(equalTo: trailingAnchor),
-        button.topAnchor.constraint(equalTo: topAnchor),
-        button.bottomAnchor.constraint(equalTo: bottomAnchor),
+        hStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 36),
+        hStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -36),
+        hStackView.topAnchor.constraint(equalTo: topAnchor, constant: 16),
+        hStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16),
       ])
-      button.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
     }
-    if stackView == nil {
-      let stackView = UIStackView(frame: .zero)
-      addSubview(stackView)
-      self.stackView = stackView
-      stackView.axis = .vertical
-      stackView.spacing = 4
-      stackView.alignment = .fill
-      stackView.distribution = .fill
-      stackView.isUserInteractionEnabled = false
-      stackView.translatesAutoresizingMaskIntoConstraints = false
-      NSLayoutConstraint.activate([
-        stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 36),
-        stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -36),
-        stackView.topAnchor.constraint(equalTo: topAnchor, constant: 16),
-        stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16),
-      ])
+    if vStackView == nil {
+      let vStackView = UIStackView(frame: .zero)
+      hStackView.addArrangedSubview(vStackView)
+      self.vStackView = vStackView
+      vStackView.axis = .vertical
+      vStackView.spacing = 4
+      vStackView.alignment = .fill
+      vStackView.distribution = .fill
     }
     
     if titleLabel == nil {
       let titleLabel = UILabel(frame: .zero)
-      stackView.addArrangedSubview(titleLabel)
+      vStackView.addArrangedSubview(titleLabel)
       self.titleLabel = titleLabel
       titleLabel.font = UIFont.systemFont(ofSize: 11, weight: .regular)
       titleLabel.textColor = UIColor(rgb: 0xB6B7B7)
@@ -116,12 +114,28 @@ public class FDCustomTextField: UIView {
     
     if textField == nil {
       let textField = UITextField(frame: .zero)
-      stackView.addArrangedSubview(textField)
+      vStackView.addArrangedSubview(textField)
       self.textField = textField
       textField.font = UIFont.systemFont(ofSize: 14, weight: .medium)
       textField.textColor = UIColor(rgb: 0x4A4B4D)
       textField.translatesAutoresizingMaskIntoConstraints = false
       textField.heightAnchor.constraint(greaterThanOrEqualToConstant: 14).isActive = true
+    }
+    
+    if accessoryButton == nil {
+      switch contentType {
+      case .password:
+        let accessoryButton = UIButton(type: .system)
+        hStackView.addArrangedSubview(accessoryButton)
+        self.accessoryButton = accessoryButton
+        accessoryButton.setImage(UIImage(systemName: "eye"), for: .normal)
+        accessoryButton.tintColor = UIColor(rgb: 0xB6B7B7)
+        accessoryButton.setContentHuggingPriority(.required, for: .horizontal)
+        accessoryButton.addTarget(self, action: #selector(accessoryButtonTapped(_:)), for: .touchUpInside)
+      
+      default:
+        break
+      }
     }
     
     update()
@@ -156,5 +170,17 @@ public class FDCustomTextField: UIView {
   
   @objc func buttonTapped(_ sender: Any) {
     textField.becomeFirstResponder()
+  }
+  
+  @objc func accessoryButtonTapped(_ sender: Any) {
+    textField.isSecureTextEntry = !textField.isSecureTextEntry
+    accessoryButton.setImage(textField.isSecureTextEntry ? UIImage(systemName: "eye") : UIImage(systemName: "eye.slash"), for: .normal)
+  }
+  
+  override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    super.touchesBegan(touches, with: event)
+    if let point = touches.first?.location(in: self), bounds.contains(point) {
+      textField.becomeFirstResponder()
+    }
   }
 }

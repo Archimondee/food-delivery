@@ -20,7 +20,7 @@ class ProfileViewController: UIViewController {
   @IBOutlet var passwordTextField: FDCustomTextField!
   @IBOutlet var saveButton: FDPrimaryButton!
   @IBOutlet var stackView: UIStackView!
-
+  @IBOutlet var locationButton: FDSecondaryButton!
   override func viewDidLoad() {
     super.viewDidLoad()
 
@@ -34,5 +34,12 @@ class ProfileViewController: UIViewController {
     socialTextField.contentType = .phone
 
     stackView.insertArrangedSubview(socialTextField, at: 4)
+  }
+
+  @IBAction func locationButtonTapped(_ sender: Any) {
+    presentLocationPickerViewController(completion: { location, address in
+      self.addressTextField.text = address ?? ""
+      self.locationButton.setTitle("\(String(format: "%.6f", location.latitude)), \(String(format: "%.6f", location.longitude))", for: .normal)
+    })
   }
 }
