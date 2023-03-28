@@ -28,7 +28,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zfV-h1-gUV" customClass="FDRoundedView" customModule="FDUI">
                                                 <rect key="frame" x="145" y="20" width="100" height="100"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_dummy_category" translatesAutoresizingMaskIntoConstraints="NO" id="jgW-6K-7Ag">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_dummy_category" translatesAutoresizingMaskIntoConstraints="NO" id="jgW-6K-7Ag">
                                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="os8-Gv-AJe">
@@ -40,6 +40,9 @@
                                                         <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="0.43578018344709896" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="camera.fill" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="cameraButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="oeT-e6-8Ay"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -329,9 +332,6 @@
     <designables>
         <designable name="Hok-Aw-B5X">
             <size key="intrinsicContentSize" width="37" height="32"/>
-        </designable>
-        <designable name="aCw-fS-rWx">
-            <size key="intrinsicContentSize" width="117" height="32"/>
         </designable>
     </designables>
     <resources>

@@ -52,6 +52,9 @@
 		F47A6FFD29D1EA3A00302C49 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A6FFC29D1EA3A00302C49 /* Point.swift */; };
 		F47A6FFF29D1EBA200302C49 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A6FFE29D1EBA200302C49 /* LoginRequest.swift */; };
 		F47A700129D1EBB000302C49 /* SignupRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A700029D1EBB000302C49 /* SignupRequest.swift */; };
+		F47A700429D2208900302C49 /* FoodDelivery.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F47A700229D2208800302C49 /* FoodDelivery.xcdatamodeld */; };
+		F47A700B29D2224100302C49 /* UserData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A700929D2224100302C49 /* UserData+CoreDataClass.swift */; };
+		F47A700C29D2224100302C49 /* UserData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47A700A29D2224100302C49 /* UserData+CoreDataProperties.swift */; };
 		F4AB5E5C29A64E820030142C /* FDUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4AB5E5B29A64E820030142C /* FDUI.framework */; };
 		F4AB5E5D29A64E820030142C /* FDUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F4AB5E5B29A64E820030142C /* FDUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F4B13F5129CCAFCB008ECA3E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B13F5029CCAFCB008ECA3E /* API.swift */; };
@@ -160,6 +163,9 @@
 		F47A6FFC29D1EA3A00302C49 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
 		F47A6FFE29D1EBA200302C49 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		F47A700029D1EBB000302C49 /* SignupRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRequest.swift; sourceTree = "<group>"; };
+		F47A700329D2208900302C49 /* FoodDelivery.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodDelivery.xcdatamodel; sourceTree = "<group>"; };
+		F47A700929D2224100302C49 /* UserData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F47A700A29D2224100302C49 /* UserData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F4A2626E29A1CD20003FD910 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		F4AB5E5B29A64E820030142C /* FDUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FDUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4B13F5029CCAFCB008ECA3E /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -326,6 +332,7 @@
 				F43840F529628DA000EFFFAD /* LaunchScreen.storyboard */,
 				F43840F829628DA000EFFFAD /* Info.plist */,
 				F436E9C129A9423D0050A737 /* GoogleService-Info.plist */,
+				F47A700229D2208800302C49 /* FoodDelivery.xcdatamodeld */,
 			);
 			path = FoodDelivery;
 			sourceTree = "<group>";
@@ -400,6 +407,8 @@
 		F4EFF2D529A1B89900A72878 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F47A700929D2224100302C49 /* UserData+CoreDataClass.swift */,
+				F47A700A29D2224100302C49 /* UserData+CoreDataProperties.swift */,
 				F4EFF2D629A1B8AD00A72878 /* Ftux.swift */,
 				F4099D4729A3208500B764A3 /* FDObservable.swift */,
 				F4B13F5429CCB671008ECA3E /* RestaurantCategory.swift */,
@@ -707,6 +716,7 @@
 				F4F4D41729A1D26100633A91 /* CollectionViewCell.swift in Sources */,
 				F47A6FF929D1E99900302C49 /* UserProvider.swift in Sources */,
 				F4185C7029A5B81C00FC2EA5 /* RegisterViewController.swift in Sources */,
+				F47A700C29D2224100302C49 /* UserData+CoreDataProperties.swift in Sources */,
 				F4EFF2DA29A1B9A400A72878 /* FtuxProvider.swift in Sources */,
 				F43840EB29628D9C00EFFFAD /* AppDelegate.swift in Sources */,
 				F4E4ED6929CC321400D35DC8 /* PopularRestaurantViewCell.swift in Sources */,
@@ -715,9 +725,11 @@
 				F4089D7029A4738800BE815C /* UIColorExtension.swift in Sources */,
 				F4266F2929AE7499003B6A0C /* ResetPasswordViewModel.swift in Sources */,
 				F47A6FFB29D1E9F300302C49 /* User.swift in Sources */,
+				F47A700B29D2224100302C49 /* UserData+CoreDataClass.swift in Sources */,
 				F41646F029AFD75F002A2E87 /* ProfileViewController.swift in Sources */,
 				F41A6BFC29A9B5A900BC0A6E /* RegisterViewModel.swift in Sources */,
 				F41646E629AFD667002A2E87 /* MenuViewController.swift in Sources */,
+				F47A700429D2208900302C49 /* FoodDelivery.xcdatamodeld in Sources */,
 				F47A6FFF29D1EBA200302C49 /* LoginRequest.swift in Sources */,
 				F442504229A45D710040C8D1 /* LoginLandingViewController.swift in Sources */,
 				F4B13F5529CCB671008ECA3E /* RestaurantCategory.swift in Sources */,
@@ -1081,6 +1093,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F47A700229D2208800302C49 /* FoodDelivery.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F47A700329D2208900302C49 /* FoodDelivery.xcdatamodel */,
+			);
+			currentVersion = F47A700329D2208900302C49 /* FoodDelivery.xcdatamodel */;
+			path = FoodDelivery.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F43840DF29628D9C00EFFFAD /* Project object */;
 }

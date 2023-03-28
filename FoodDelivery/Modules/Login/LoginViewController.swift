@@ -137,7 +137,7 @@ class LoginViewController: UIViewController {
   // MARK: - Actions
   
   @IBAction func loginButtonTap(_ sender: Any) {
-    viewModel.login()
+    viewModel.loginWithEmail()
   }
   
   @IBAction func fbButtonTapped(_ sender: Any) {
